@@ -1,0 +1,192 @@
+﻿/*Style Img*/
+img {
+    border: 0;
+    transition: all .2s ease-in-out;
+}
+
+.slide-home {
+    margin: 10px 0;
+    display: block;
+    min-height: 125px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+    .slide-home a:first-child {
+        display: block;
+        background-color: #fff !important;
+        min-height: 125px;
+    }
+
+    .slide-home a img {
+        margin: auto;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+
+.owl-carousel.owl-loaded {
+    display: block;
+}
+
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+}
+
+.owl-carousel .owl-stage {
+    position: relative;
+    touch-action: manipulation;
+}
+
+    .owl-carousel .owl-stage:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+}
+
+/*Style Owl Nav*/
+.owl-theme .owl-nav {
+    top: calc(50% - 20px);
+    left: 5px;
+    right: 5px;
+}
+
+.owl-theme .owl-nav {
+    position: absolute;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 0;
+    text-align: center;
+}
+
+    .owl-theme .owl-nav .hint.owl-prev {
+        margin-left: 10px;
+    }
+
+
+.owl-carousel .owl-nav button.owl-prev {
+    text-indent: -999px;
+}
+
+.owl-theme .owl-nav .hint {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 1px 12px 0 rgba(0,0,0,.12);
+    margin-top: 10px;
+}
+
+.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: #028848 !important;
+    border-radius: 50%;
+    margin: 0;
+    outline: none ;
+}
+
+.owl-theme .owl-nav .owl-prev {
+    float: left;
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+    cursor: pointer;
+    user-select: none;
+}
+
+.owl-theme .owl-nav .hint.owl-prev:before {
+    margin-left: 8px;
+}
+
+.owl-theme .owl-nav .hint.owl-prev:before, .owl-theme .owl-nav .hint.owl-next:before {
+    width: 5px;
+    height: 5px;
+}
+
+.owl-theme .owl-nav .owl-prev:before {
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    margin-left: 16px;
+}
+
+.owl-theme .owl-nav .owl-prev:before, .owl-theme .owl-nav .owl-next:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+
+.owl-theme .owl-nav .hint.owl-next {
+    margin-right: 10px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    text-indent: 999px;
+}
+
+.owl-theme .owl-nav .owl-next {
+    float: right;
+}
+
+.owl-theme .owl-nav .hint.owl-next:before {
+    margin-right: 8px;
+}
+
+.owl-theme .owl-nav .hint.owl-prev:before, .owl-theme .owl-nav .hint.owl-next:before {
+    width: 5px;
+    height: 5px;
+}
+
+.owl-theme .owl-nav .owl-next:before {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-right: 16px;
+}
+
+.owl-theme .owl-nav .owl-prev:before, .owl-theme .owl-nav .owl-next:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+
+/*Style Owl-Dots*/
+.slide-home .owl-dots {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.owl-theme .owl-dots {
+    text-align: center;
+}
+
+    .owl-theme .owl-dots .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        outline: none;
+    }
+
+        .owl-theme .owl-dots .owl-dot span {
+            width: 7px;
+            height: 7px;
+            margin: 5px 6px;
+            background: #d6d6d6;
+            display: block;
+            transition: opacity 200ms ease;
+            border-radius: 30px;
+        }

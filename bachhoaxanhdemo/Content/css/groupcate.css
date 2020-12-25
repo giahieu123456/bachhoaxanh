@@ -1,0 +1,42 @@
+﻿.groupcate {
+    display: block;
+    background: #fff;
+    margin: 10px 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+    .groupcate .namegroup {
+        color: #333;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .groupcate .listgroup {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+        .groupcate .listgroup a {
+            display: flex;
+            flex-direction: column;
+            /*justify-content: center;*/
+            align-items: center;
+            width: 10%;
+            margin: 0 0 10px;
+        }
+
+            .groupcate .listgroup a img {
+                margin: 0 26.5px 5px;
+            }
+
+            .groupcate .listgroup a span {
+                display: block;
+                line-height: 1.3em;
+                margin: 0 5px;
+                color: #0064c2;
+                font-size: 13px;
+                text-align: center;
+            }

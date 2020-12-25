@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,34 +128,113 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ExampleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BHX.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHX.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BHX.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BHX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHX.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>BHX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DemoModel.cs" />
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>BHX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductByCate.cs" />
+    <Compile Include="Models\ProductTitle.cs">
+      <DependentUpon>BHX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>BHX.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\groupcate.css" />
+    <Content Include="Content\css\groupfeaturefresh.css" />
+    <Content Include="Content\css\groupfeatureproduct.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\owl.theme.default.min.css" />
+    <Content Include="Content\css\section.css" />
+    <Content Include="Content\css\slidebanner.css" />
+    <Content Include="Content\image\bhxdesk%402x.v202011232343.png" />
+    <Content Include="Content\image\bhxdesk%402x.v202012221436.png" />
+    <Content Include="Content\image\bhxicon.ico" />
+    <Content Include="Content\image\bhxicon.png" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\header.css" />
+    <Content Include="Content\image\favicon.ico" />
+    <Content Include="Content\image\banner1.jpg" />
+    <Content Include="Content\image\home-showcase.png" />
+    <Content Include="Content\image\khan-giay-uot-202006010858420776.png" />
+    <Content Include="Content\image\logo%402x.png" />
+    <Content Include="Content\image\logo.png" />
+    <Content Include="Content\css\minireset.min.css" />
+    <Content Include="Content\image\banner2.jpg" />
+    <Content Include="Content\image\banner3.jpg" />
+    <Content Include="Content\image\banner4.jpg" />
+    <Content Include="Content\image\banner5.jpg" />
+    <Content Include="Content\image\banner6.jpg" />
+    <Content Include="Content\image\banner7.jpg" />
+    <Content Include="Content\image\nuoc-ngot-giai-khat-202006020939383550.png" />
+    <Content Include="Content\image\Spinner-1s-200px.gif" />
+    <Content Include="Content\image\stickFresh.png" />
+    <Content Include="Content\image\sua-tuoi-202006021003313572.png" />
+    <Content Include="Content\image\thit-hai-san-dong-lanh-201910311114302141.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Models\BHX.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BHX.Context.cs</LastGenOutput>
+      <DependentUpon>BHX.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\BHX.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BHX.edmx</DependentUpon>
+      <LastGenOutput>BHX.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\Home\LoadMore.js" />
+    <Content Include="Scripts\Home\owl.carousel.min.js" />
+    <Content Include="Scripts\Utility\bootstrap.js" />
+    <Content Include="Scripts\Utility\bootstrap.min.js" />
+    <EntityDeploy Include="Models\BHX.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BHX.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BHX.edmx.diagram">
+      <DependentUpon>BHX.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\Utility\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Home\owlcarousel.js" />
+    <Content Include="Scripts\Utility\jquery-3.4.1.js" />
+    <Content Include="Scripts\Utility\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\Utility\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\Utility\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\Utility\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\Utility\jquery.validate.js" />
+    <Content Include="Scripts\Utility\jquery.validate.min.js" />
+    <Content Include="Scripts\Utility\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\Utility\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Utility\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -159,26 +246,35 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Example\Index.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\SlideBanner.cshtml" />
+    <Content Include="Views\Shared\Section.cshtml" />
+    <Content Include="Views\Shared\GroupCategory.cshtml" />
+    <Content Include="Views\Shared\GroupFeatureFresh.cshtml" />
+    <Content Include="Views\Shared\GroupFeatureProduct.cshtml" />
+    <Content Include="Views\Home\GroupFeature.cshtml" />
+    <Content Include="Views\Home\LoadMoreProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\Utility\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\Utility\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

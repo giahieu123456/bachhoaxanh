@@ -1,0 +1,32 @@
+﻿@model IEnumerable<bachhoaxanhdemo.Models.Product>
+
+@{
+    ViewBag.Title = "LoadMoreProduct";
+}
+
+@if (Model != null)
+{
+
+    foreach (var item in Model)
+    {
+        <div class="product">
+            <a href="#" title="Cải thìa túi 500g">
+                <div class="boximg center" title="Cải thìa túi 500g">
+                    <img width="160" height="160" alt="bg-Lốc 4 hộp sữa tiệt trùng Dutch Lady 170ml" src=@(item.image != null ? item.image.Split(' ')[0] : "https://cdn.tgdd.vn/Products/Images/2943/229508/bhx/thung-16-hop-sua-dau-nanh-dau-den-oc-cho-hanh-nhan-yaho-190ml-202011060932118206_300x300.jpg") />
+                </div>
+                <div class="product-name">@(item.productName ?? item.productName)</div>
+                <div class="price">
+                    <span>22.000đ</span>
+                    <strong>
+                          
+                        @(item.productPrice?.ToString("#,##0 d"))
+                    </strong>
+                    <label>-24%</label>
+                </div>
+            </a>
+            <a class="buy">Chọn mua</a>
+        </div>
+
+    }
+
+}

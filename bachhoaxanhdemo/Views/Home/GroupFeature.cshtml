@@ -1,0 +1,114 @@
+﻿
+
+@{
+    ViewBag.Title = "GroupFeature";
+    Layout = null;
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@foreach (var cate in ViewBag.Category)
+{
+    <div class="groupfeature">
+        <h2 class="hometitle">
+            @cate.categoryName
+        </h2>
+        <ul class="cate cateproduct" data-id=@cate.idCategory id="catenow">
+            @*@{var a = 0;
+
+
+                }*@
+            @*@foreach (var item in ViewBag.listProductByCate)
+            {
+                if (item.ID_CATE == cate.idCategory)
+                {
+                    //{ a = a + 1; }
+                    //if (a == 4) break;
+                    <li class="product">
+                        <a href="#" title="Cải thìa túi 500g">
+                            <div class="boximg center" title="Cải thìa túi 500g">
+                                <img width="160" height="160" alt="bg-Lốc 4 hộp sữa tiệt trùng Dutch Lady 170ml" src=@(item.LIST_PRODUCT.image != null ? item.LIST_PRODUCT.image.Split(' ')[0] : "https://cdn.tgdd.vn/Products/Images/2943/229508/bhx/thung-16-hop-sua-dau-nanh-dau-den-oc-cho-hanh-nhan-yaho-190ml-202011060932118206_300x300.jpg") />
+                            </div>
+                            <div class="product-name">@(item.LIST_PRODUCT.productName ?? item.LIST_PRODUCT.productName )</div>
+                            <div class="price">
+                                <span>22.000đ</span>
+                                <strong>
+                                    @(item.LIST_PRODUCT.productPrice?.ToString("#,##0₫"))
+                                </strong>
+                                <label>-24%</label>
+                            </div>
+                        </a>
+                        <a class="buy">Chọn mua</a>
+                    </li>
+                }
+
+            }*@
+
+
+
+        </ul>
+
+
+        <div class="viewmore noafter" id="loadMore">
+            Xem thêm 162 sản phẩm khuyến mãi
+            <span>
+                <img id="loading" style="display: none;" src="~/Content/image/Spinner-1s-200px.gif" />
+            </span>
+        </div>
+        <div class="cate-prom">
+            <a class="hidden" href="sua-tuoi">Sữa tươi</a>
+            <a class="hidden" href="sua-chua">Sữa chua</a>
+            <a class="hidden" href="sua-ca-cao">Sữa ca cao</a>
+        </div>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+
+
+        $('.viewmore').click(function (e) {
+            var page_index = 0;
+            $(e.target).prev().children().map(function (item) {
+                return page_index = page_index + 1;
+            }
+            )
+            var idcate = $(e.target).prev().attr('data-id')
+
+            var url = "/Home/LoadMoreProduct/";
+            $.ajax({
+                url: url,
+                data: { idcate: idcate, page_index: page_index },
+                cache: false,
+                type: "POST",
+                success: function (data) {
+
+                    if (data.length !== 0) {
+                        //$(data.ModelString).insertBefore(".cateproduct").find().hide().fadeIn(2000);
+                        var a = $("#catenow").html();
+                        $("#catenow").html(a + data.ModelString);
+                    }
+
+                    var ajaxModelCount = data.ModelCount - (loadCount * 4);
+                    if (ajaxModelCount <= 0) {
+                        $("#loadMore").hide().fadeOut(2000);
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    console.log(xhr.responseText);
+                    alert("message : \n" +
+                        "An error occurred, for more info check the js console" +
+                        "\n status : \n" + status + " \n error : \n" + error);
+                }
+            });
+
+            console.log(page_index)
+            console.log(idcate)
+        })
+
+        
+    });
+</script>
+
+
+
+
+

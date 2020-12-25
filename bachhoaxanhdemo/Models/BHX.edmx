@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bhxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="idCategory" />
+          </Key>
+          <Property Name="idCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="idProduct" />
+          </Key>
+          <Property Name="idProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productName" Type="nvarchar" MaxLength="100" />
+          <Property Name="productPrice" Type="float" />
+          <Property Name="tradeMark" Type="nvarchar" MaxLength="50" />
+          <Property Name="madeIn" Type="nvarchar" MaxLength="50" />
+          <Property Name="ingredient" Type="nvarchar" MaxLength="500" />
+          <Property Name="howToUse" Type="nvarchar" MaxLength="500" />
+          <Property Name="weight" Type="float" />
+          <Property Name="preservation" Type="nvarchar" MaxLength="500" />
+          <Property Name="decription" Type="nvarchar" MaxLength="1000" />
+          <Property Name="image" Type="nvarchar" MaxLength="2000" />
+          <Property Name="idProductTitle" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductTitle">
+          <Key>
+            <PropertyRef Name="idProductTitle" />
+          </Key>
+          <Property Name="idProductTitle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productTitleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="idCategory" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Product_ProductTitle">
+          <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductTitle">
+              <PropertyRef Name="idProductTitle" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="idProductTitle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductTitle_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="idCategory" />
+            </Principal>
+            <Dependent Role="ProductTitle">
+              <PropertyRef Name="idCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bhxModelStoreContainer">
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductTitle" EntityType="Self.ProductTitle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Product_ProductTitle" Association="Self.FK_Product_ProductTitle">
+            <End Role="ProductTitle" EntitySet="ProductTitle" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductTitle_Category" Association="Self.FK_ProductTitle_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="ProductTitle" EntitySet="ProductTitle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bhxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="idCategory" />
+          </Key>
+          <Property Name="idCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProductTitles" Relationship="Self.FK_ProductTitle_Category" FromRole="Category" ToRole="ProductTitle" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="idProduct" />
+          </Key>
+          <Property Name="idProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="productPrice" Type="Double" />
+          <Property Name="tradeMark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="madeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ingredient" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="howToUse" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="Double" />
+          <Property Name="preservation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="decription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="idProductTitle" Type="Int32" />
+          <NavigationProperty Name="ProductTitle" Relationship="Self.FK_Product_ProductTitle" FromRole="Product" ToRole="ProductTitle" />
+        </EntityType>
+        <EntityType Name="ProductTitle">
+          <Key>
+            <PropertyRef Name="idProductTitle" />
+          </Key>
+          <Property Name="idProductTitle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productTitleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idCategory" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_ProductTitle_Category" FromRole="ProductTitle" ToRole="Category" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductTitle" FromRole="ProductTitle" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_ProductTitle_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="idCategory" />
+            </Principal>
+            <Dependent Role="ProductTitle">
+              <PropertyRef Name="idCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_ProductTitle">
+          <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductTitle">
+              <PropertyRef Name="idProductTitle" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="idProductTitle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bhxEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="ProductTitles" EntityType="Self.ProductTitle" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_ProductTitle_Category" Association="Self.FK_ProductTitle_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="ProductTitle" EntitySet="ProductTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_ProductTitle" Association="Self.FK_Product_ProductTitle">
+            <End Role="ProductTitle" EntitySet="ProductTitles" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bhxModelStoreContainer" CdmEntityContainer="bhxEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="bhxModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="bhxModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="productPrice" ColumnName="productPrice" />
+                <ScalarProperty Name="tradeMark" ColumnName="tradeMark" />
+                <ScalarProperty Name="madeIn" ColumnName="madeIn" />
+                <ScalarProperty Name="ingredient" ColumnName="ingredient" />
+                <ScalarProperty Name="howToUse" ColumnName="howToUse" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="preservation" ColumnName="preservation" />
+                <ScalarProperty Name="decription" ColumnName="decription" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="idProductTitle" ColumnName="idProductTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductTitles">
+            <EntityTypeMapping TypeName="bhxModel.ProductTitle">
+              <MappingFragment StoreEntitySet="ProductTitle">
+                <ScalarProperty Name="idProductTitle" ColumnName="idProductTitle" />
+                <ScalarProperty Name="productTitleName" ColumnName="productTitleName" />
+                <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="bhxModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

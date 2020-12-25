@@ -1,0 +1,117 @@
+﻿<header class="sticky">
+    <div class="tophead">
+        <a href="@Url.Action("Index", "Home")" class="header__logo" aria-hidden="true">
+            <i class="bhx-logo"></i>
+        </a>
+        <div class="header__popup-overlays" style="display:none"></div>
+        <div class="header__locationContainer">
+            <div class="locationUser">
+                <div class="location_left">
+                    <i class="bhx-toggle"></i>
+                    <div class="current_locate">
+                        <span class="shipto">Giao tại : </span>
+                        <span class="shiptohere">Thành phố Hồ Chí Minh</span>
+                        <span class="change">Thay đổi</span>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="header__cart">
+            <form class="mainsearch">
+                <div class="easy-autocomplete" style="width:385px">
+                    <input type="text" autocomplete="off" placeholder="Anh tìm gì..." id="text-search" maxlength="80" aria-label="text-search" />
+                </div>
+                <div class="reset" style="display:none"><i class="bhx-closemenu"></i></div>
+                <button type="submit" aria-label="Search">
+                    <i class="bhx-search" style="display: inline-block;"></i>
+                    <div class="btn-search" style="display:none"><span>TÌM</span></div>
+                </button>
+
+            </form>
+            <a href="/lich-su-mua-hang" class="histories">
+                Đơn hàng
+                <br />
+                anh Tuấn
+            </a>
+            <a href="/gio-hang" class="temcart no">
+                <div>
+                    <i class="bhx-cart" style="display:inline-block"></i>
+                    <span class="hidden">0</span>
+                </div>
+                <div>
+                    <b class="card">GIỎ HÀNG</b>
+                    <b class="sumorder hidden">0 VND</b>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    @* Html DANH MUC SAN PHAM *@
+    <aside class="colmenu sb-container sb-container-noscroll">
+        <div class="sb-scrollbar-container">
+            <div class="sb-scrollbar" style="height:auto; top:auto"></div>
+        </div>
+        <div class="sb-content" style="max-height:952px">
+            <nav class="menu-hover">
+                <span>
+                    <i class="bhx-navmenu"></i>
+                    DANH MỤC SẢN PHẨM
+                </span>
+                <ul class="colmenu-ul">
+                    <li class="fourkfarm"><a href="/rau-an-toan-4kfarm">RAU AN TOÀN 4kFarm</a></li>
+                    <li>
+                        <div class="nav-parent">Đồ uống các loại</div>
+                        <div class="nav-item">
+                            <div class="parent">
+                                <a href="/nuoc-ngot-nuoc-tra-nuoc-giai-khat" class="link-hover menu-haschild">Nước ngọt, nước trà, nước giải khảt</a>
+                            </div>
+                            <div class="parent">
+                                <a href="/ca-phe-tra" class="link-hover menu-haschild">Cà phê, trà khô, túi lọc, trà hòa tan</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-parent">Sữa các loại</div>
+                        <div class="nav-item">
+                            <div class="parent">
+                                <a href="/sua-tuoi" class="link-hover menu-haschild">Sữa tươi</a>
+                            </div>
+                            <div class="parent">
+                                <a href="/sua-tu-hat" class="link-hover menu-haschild">Sữa đậu nành, sữa từ hạt</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-search">
+                        <input type="search" class="search-menu" id="searchMenu" autocomplete="off" spellcheck="false" aria-label="Tìm món hàng" placeholder="Nhập món hàng cần tìm" />
+                        <button class="show" type="button" aria-label="Search">
+                            <i class="bhx-search"></i>
+                        </button>
+                    </li>
+                    <li class="productpromo-count">
+                        <a href="/khuyen-mai">
+                            <i class="bhx-productpromo"></i>
+                            <strong class="number">2.151</strong>
+                            sản phẩm khuyến mãi
+                        </a>
+                    </li>
+                    <li class="product-expired">
+                        <a href="/khuyen-mai/xa-kho-gia-soc">
+                            <i class="bhx-productexpired"></i>
+                            Xả kho giá sốc
+                        </a>
+                    </li>
+                    <li class="store-count">
+                        <a href="/he-thong-sieu-thi">
+                            <i class="bhx-storecount"></i>
+                            Danh sách
+                            <strong class="number">1.688</strong>
+                            cửa hàng
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+</header>
