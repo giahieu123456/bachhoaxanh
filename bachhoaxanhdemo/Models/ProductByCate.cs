@@ -7,5 +7,7 @@ namespace bachhoaxanhdemo.Models
 {
     public class ProductByCate
     {
+        public List<DemoModel> lst { get; set; }
+        public int modelCount { get; set; }
     }
 }

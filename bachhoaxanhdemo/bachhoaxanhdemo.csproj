@@ -256,6 +256,7 @@
     <Content Include="Views\Shared\GroupFeatureProduct.cshtml" />
     <Content Include="Views\Home\GroupFeature.cshtml" />
     <Content Include="Views\Home\LoadMoreProduct.cshtml" />
+    <Content Include="Views\Home\GroupFeatureProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
