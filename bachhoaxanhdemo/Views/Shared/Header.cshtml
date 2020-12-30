@@ -1,4 +1,5 @@
-﻿<header class="sticky">
+﻿
+<header class="sticky">
     <div class="tophead">
         <a href="@Url.Action("Index", "Home")" class="header__logo" aria-hidden="true">
             <i class="bhx-logo"></i>
@@ -61,28 +62,34 @@
                 </span>
                 <ul class="colmenu-ul">
                     <li class="fourkfarm"><a href="/rau-an-toan-4kfarm">RAU AN TOÀN 4kFarm</a></li>
-                    <li>
-                        <div class="nav-parent">Đồ uống các loại</div>
-                        <div class="nav-item">
-                            <div class="parent">
-                                <a href="/nuoc-ngot-nuoc-tra-nuoc-giai-khat" class="link-hover menu-haschild">Nước ngọt, nước trà, nước giải khảt</a>
+
+                    @foreach (var item in @ViewBag.listCategories)
+                    {
+                        if (@item.idCategory !=1)
+                        {
+                        <li>
+                            <div class="nav-parent">@item.categoryName</div>
+                            <div class="nav-item">
+
+                                @foreach (var title in @ViewBag.listTitle)
+                                {
+                                    if (title.idCategory == item.idCategory)
+                                    {
+                                        <div class="parent">
+                                            <a href="/" class="link-hover menu-haschild">@title.productTitleName</a>
+                                        </div>
+                                    }
+                                }
+
+
+
                             </div>
-                            <div class="parent">
-                                <a href="/ca-phe-tra" class="link-hover menu-haschild">Cà phê, trà khô, túi lọc, trà hòa tan</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="nav-parent">Sữa các loại</div>
-                        <div class="nav-item">
-                            <div class="parent">
-                                <a href="/sua-tuoi" class="link-hover menu-haschild">Sữa tươi</a>
-                            </div>
-                            <div class="parent">
-                                <a href="/sua-tu-hat" class="link-hover menu-haschild">Sữa đậu nành, sữa từ hạt</a>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                        }
+                    }
+
+
+
                     <li class="nav-search">
                         <input type="search" class="search-menu" id="searchMenu" autocomplete="off" spellcheck="false" aria-label="Tìm món hàng" placeholder="Nhập món hàng cần tìm" />
                         <button class="show" type="button" aria-label="Search">
