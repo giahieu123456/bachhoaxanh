@@ -13,7 +13,7 @@ namespace bachhoaxanhdemo.Controllers
 
     public class HomeController : Controller
     {
-        public bhxEntities _dbBhx = new bhxEntities();
+        public bhxEntities1 _dbBhx = new bhxEntities1();
 
 
 

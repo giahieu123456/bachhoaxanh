@@ -28,7 +28,5 @@ namespace bachhoaxanhdemo.Models
         public Nullable<int> idProductTitle { get; set; }
     
         public virtual ProductTitle ProductTitle { get; set; }
-
-        
     }
 }

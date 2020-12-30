@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bhxModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="idCategory" />
+    </Key>
+    <Property Name="idCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductTitles" Relationship="Self.FK_ProductTitle_Category" FromRole="Category" ToRole="ProductTitle" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="idProduct" />
+    </Key>
+    <Property Name="idProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="productPrice" Type="Double" />
+    <Property Name="tradeMark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="madeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ingredient" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="howToUse" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="weight" Type="Double" />
+    <Property Name="preservation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="decription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="idProductTitle" Type="Int32" />
+    <NavigationProperty Name="ProductTitle" Relationship="Self.FK_Product_ProductTitle" FromRole="Product" ToRole="ProductTitle" />
+  </EntityType>
+  <EntityType Name="ProductTitle">
+    <Key>
+      <PropertyRef Name="idProductTitle" />
+    </Key>
+    <Property Name="idProductTitle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productTitleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idCategory" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_ProductTitle_Category" FromRole="ProductTitle" ToRole="Category" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductTitle" FromRole="ProductTitle" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_ProductTitle_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="idCategory" />
+      </Principal>
+      <Dependent Role="ProductTitle">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductTitle">
+    <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTitle">
+        <PropertyRef Name="idProductTitle" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idProductTitle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bhxEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductTitles" EntityType="Self.ProductTitle" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_ProductTitle_Category" Association="Self.FK_ProductTitle_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="ProductTitle" EntitySet="ProductTitles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductTitle" Association="Self.FK_Product_ProductTitle">
+      <End Role="ProductTitle" EntitySet="ProductTitles" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
