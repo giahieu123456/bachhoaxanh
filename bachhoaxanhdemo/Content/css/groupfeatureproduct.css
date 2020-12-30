@@ -1,0 +1,191 @@
+﻿.groupfeature .hometitle {
+    padding: 7px 10px 12px;
+    background: #e9edf0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+    .groupfeature .hometitle:before {
+        content: '';
+        border-left: 4px solid #008848;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 32px;
+    }
+
+.hometitle {
+    display: block;
+    overflow: hidden;
+    line-height: 1.3em;
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.groupfeature .cate {
+    background: none;
+    overflow: inherit;
+}
+
+.cate {
+    display: flex;
+    flex-flow: row wrap;
+    clear: both;
+}
+
+    .cate .product {
+        float: left;
+        width: 245px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-top: 0;
+        margin: 0;
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+        .cate .product a {
+            display: block;
+            overflow: hidden;
+            padding: 8px 8px 0;
+        }
+
+        .cate .product .boximg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            /*.cate .product .boximg img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+*/
+        .cate .product .product-name {
+            display: block;
+            overflow: hidden;
+            line-height: 1.3em;
+            font-size: 13px;
+            color: #333;
+            padding: 10px 0 0;
+            margin-bottom: 7px;
+            text-overflow: ellipsis;
+            white-space: initial;
+            min-height: 40px;
+            height: 16px;
+        }
+
+        .cate .product .price {
+            display: block;
+            overflow: hidden;
+        }
+
+            .cate .product .price span {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: #757575;
+                text-decoration: line-through;
+                font-weight: 300;
+            }
+
+            .cate .product .price strong {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: #b10e0e;
+                font-weight: bold;
+                font-weight: normal;
+            }
+
+            .cate .product .price label {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 3px;
+                background: #de2000;
+                width: 32px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+            }
+
+        .cate .product .buy {
+            display: block;
+            overflow: hidden;
+            font-size: 13px;
+            color: #008848;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px 0;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #008848;
+        }
+
+
+.viewmore.noafter {
+    background: none;
+    cursor: pointer;
+}
+
+.viewmore {
+    display: block;
+    overflow: hidden;
+    line-height: 30px;
+    color: #0064c2;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.groupfeature .viewmore:after {
+    content: '';
+    border-top: 5px solid #0064c2;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+}
+
+.groupfeature .cate-prom {
+    padding: 10px 20px;
+    overflow: hidden;
+    background: #fff;
+}
+
+    .groupfeature .cate-prom a {
+        display: inline-block;
+        width: 25%;
+        float: left;
+        line-height: 25px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+        .groupfeature .cate-prom a:before {
+            content: '•';
+            font-size: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 3px;
+        }

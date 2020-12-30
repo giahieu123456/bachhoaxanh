@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bhxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="idCategory" />
+    </Key>
+    <Property Name="idCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="idProduct" />
+    </Key>
+    <Property Name="idProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productName" Type="nvarchar" MaxLength="100" />
+    <Property Name="productPrice" Type="float" />
+    <Property Name="tradeMark" Type="nvarchar" MaxLength="50" />
+    <Property Name="madeIn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ingredient" Type="nvarchar" MaxLength="500" />
+    <Property Name="howToUse" Type="nvarchar" MaxLength="500" />
+    <Property Name="weight" Type="float" />
+    <Property Name="preservation" Type="nvarchar" MaxLength="500" />
+    <Property Name="decription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="image" Type="nvarchar" MaxLength="2000" />
+    <Property Name="idProductTitle" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductTitle">
+    <Key>
+      <PropertyRef Name="idProductTitle" />
+    </Key>
+    <Property Name="idProductTitle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productTitleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="idCategory" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Product_ProductTitle">
+    <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTitle">
+        <PropertyRef Name="idProductTitle" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="idProductTitle" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductTitle_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="ProductTitle" Type="Self.ProductTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="idCategory" />
+      </Principal>
+      <Dependent Role="ProductTitle">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bhxModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductTitle" EntityType="Self.ProductTitle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Product_ProductTitle" Association="Self.FK_Product_ProductTitle">
+      <End Role="ProductTitle" EntitySet="ProductTitle" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductTitle_Category" Association="Self.FK_ProductTitle_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="ProductTitle" EntitySet="ProductTitle" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
