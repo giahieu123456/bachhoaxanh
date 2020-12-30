@@ -8,6 +8,9 @@
 
 @foreach (var cate in Model)
 {
+    if (cate.idCategory !=1 )
+    {
+
     <div class="groupfeature">
         <h2 class="hometitle">
             @cate.categoryName
@@ -56,9 +59,9 @@
             <a class="hidden" href="sua-ca-cao">Sữa ca cao</a>
         </div>
     </div>
+    }
+
 }
-
-
 
 
 

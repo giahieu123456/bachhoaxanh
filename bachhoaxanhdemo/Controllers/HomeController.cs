@@ -13,14 +13,23 @@ namespace bachhoaxanhdemo.Controllers
 
     public class HomeController : Controller
     {
-        public bhxEntities _dbBhx = new bhxEntities();
+        public bhxEntities1 _dbBhx = new bhxEntities1();
 
 
 
         public ActionResult Index()
         {
-
+            var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).ToList();
+            var listTitle = _dbBhx.ProductTitles.OrderBy(x => x.idProductTitle).ToList();
+            ViewBag.listCategories = listCategories;
+            ViewBag.listTitle = listTitle;
             return View();
+        }
+        
+        public ActionResult loadProductTitle(int idCate)
+        {
+            var listProductTitle = _dbBhx.ProductTitles.OrderBy(x => x.idCategory).ToList();
+            return ViewBag;
         }
 
         public ActionResult GroupFeature()
@@ -38,8 +47,8 @@ namespace bachhoaxanhdemo.Controllers
 
 
             //ViewBag.listProductByCate = productByCate;
-            var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).Take(5).ToList();
-
+            var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).ToList();
+            
             return View(listCategories);
         }
 
