@@ -10,8 +10,7 @@
             var page_index = 0;
             $(e.target).prev().children().map(function (item) {
                 return page_index = page_index + 1;
-            }
-            )
+            })
             var idcate = $(e.target).prev().attr('data-id')
 
             var url = "/Home/LoadMoreProduct/";

@@ -12,7 +12,8 @@ namespace bachhoaxanhdemo
                         "~/Scripts/Utility/jquery-{version}.js"
                         , "~/Scripts/Home/dropdownHeader.js",
                         "~/Scripts/Home/scrollbacktop.js",
-                        "~/Scripts/Home/popupfeedback.js"
+                        "~/Scripts/Home/popupfeedback.js",
+                         "~/Scripts/Home/LoadMore.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
