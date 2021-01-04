@@ -7,32 +7,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    @*<link href=@ViewBag.Css rel="stylesheet" />
-        <title>@ViewBag.Title</title>*@
-    @* @Styles.Render("~/Content/css")*@
+    @*<link href=@ViewBag.Css rel="stylesheet" />*@
+    <title>@ViewBag.Title</title>
+    @*@Styles.Render("~/Content/css")*@
     @*@Styles.Render(ViewBag.Css)*@
     @*@Styles.Render("~/Content/owl.carousel")*@
-    @Styles.Render("~/Content/homecss")
     @RenderSection("heads", required: false)
-
-
 </head>
 <body class="new2020">
-    @Html.Partial("Header")
+  
 
     @RenderBody()
 
-
-    @Html.Partial("footer")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/owl.carousel")
-    @section scripts{
-        <script src="~/Scripts/Home/LoadMore.js"></script>
-    }
-
+   
     @RenderSection("scripts", required: false)
-
 </body>
-
 </html>
 

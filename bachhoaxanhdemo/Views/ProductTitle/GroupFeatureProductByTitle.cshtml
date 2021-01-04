@@ -1,0 +1,45 @@
+﻿@model bachhoaxanhdemo.Models._ProdByTitle
+
+<div class="groupfeature">
+    <h2 class="hometitle">
+        @Model.ProductTitleName
+    </h2>
+    <ul class="cate cateproduct" id="catenow">
+        @foreach (var item in Model.LIST_PRODUCT)
+        {
+            <li class="product">
+                <a href="#" title="Cải thìa túi 500g">
+                    <div class="boximg center" title="Cải thìa túi 500g">
+                        <img width="160" height="160" alt="bg-Lốc 4 hộp sữa tiệt trùng Dutch Lady 170ml" src=@(item.image != null ? item.image.Split(' ')[0] : "https://cdn.tgdd.vn/Products/Images/2943/229508/bhx/thung-16-hop-sua-dau-nanh-dau-den-oc-cho-hanh-nhan-yaho-190ml-202011060932118206_300x300.jpg") />
+                    </div>
+                    <div class="product-name">@(item.productName ?? item.productName)</div>
+                    <div class="price">
+                        <span>42.000đ</span>
+                        <strong>@(item.productPrice?.ToString("#,##0 đ"))</strong>
+                        <label>-24%</label>
+                    </div>
+                </a>
+                <a class="buy">Chọn mua</a>
+            </li>
+        }
+
+    </ul>
+
+
+    <div class="viewmore noafter" id="loadMore">
+        Xem thêm <span>2</span> sản phẩm khuyến mãi
+        <span>
+            <img id="loading" style="display: none;" src="~/Content/image/Spinner-1s-200px.gif" />
+        </span>
+    </div>
+    <div class="cate-prom">
+        <a class="hidden" href="sua-tuoi">Sữa tươi</a>
+        <a class="hidden" href="sua-chua">Sữa chua</a>
+        <a class="hidden" href="sua-ca-cao">Sữa ca cao</a>
+    </div>
+</div>
+
+
+
+
+

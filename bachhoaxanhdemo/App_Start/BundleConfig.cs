@@ -10,10 +10,7 @@ namespace bachhoaxanhdemo
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/Utility/jquery-{version}.js"
-                        , "~/Scripts/Home/dropdownHeader.js",
-                        "~/Scripts/Home/scrollbacktop.js",
-                        "~/Scripts/Home/popupfeedback.js",
-                         "~/Scripts/Home/LoadMore.js"
+                        , "~/Scripts/Home/dropdownHeader.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -48,8 +45,7 @@ namespace bachhoaxanhdemo
                       "~/Content/css/slidebanner.css",
                       "~/Content/css/groupcate.css",
                       "~/Content/css/groupfeaturefresh.css",
-                      "~/Content/css/groupfeatureproduct.css",
-                      "~/Content/css/footer.css"
+                      "~/Content/css/groupfeatureproduct.css"
                      ));
         }
     }

@@ -34,106 +34,106 @@
     clear: both;
 }
 
-    .cate .product {
-        float: left;
-        width: 245px;
-        background: #fff;
-        border: 1px solid #eee;
-        border-top: 0;
-        margin: 0;
-        position: relative;
-        padding-bottom: 60px;
+.product {
+    float: left;
+    width: 245px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: 0;
+    margin: 0;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+    .product a {
+        display: block;
+        overflow: hidden;
+        padding: 8px 8px 0;
     }
 
-        .cate .product a {
-            display: block;
-            overflow: hidden;
-            padding: 8px 8px 0;
-        }
+    .product .boximg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 160px;
+        position: relative;
+        overflow: hidden;
+    }
 
-        .cate .product .boximg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 160px;
-            position: relative;
-            overflow: hidden;
-        }
-
-            /*.cate .product .boximg img {
+    /*.cate .product .boximg img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
 */
-        .cate .product .product-name {
-            display: block;
-            overflow: hidden;
-            line-height: 1.3em;
+    .product .product-name {
+        display: block;
+        overflow: hidden;
+        line-height: 1.3em;
+        font-size: 13px;
+        color: #333;
+        padding: 10px 0 0;
+        margin-bottom: 7px;
+        text-overflow: ellipsis;
+        white-space: initial;
+        min-height: 40px;
+        height: 16px;
+    }
+
+    .product .price {
+        display: block;
+        overflow: hidden;
+    }
+
+        .product .price span {
+            display: inline-block;
+            vertical-align: middle;
             font-size: 13px;
-            color: #333;
-            padding: 10px 0 0;
-            margin-bottom: 7px;
-            text-overflow: ellipsis;
-            white-space: initial;
-            min-height: 40px;
-            height: 16px;
+            color: #757575;
+            text-decoration: line-through;
+            font-weight: 300;
         }
 
-        .cate .product .price {
-            display: block;
-            overflow: hidden;
+        .product .price strong {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+            color: #b10e0e;
+            font-weight: bold;
+            font-weight: normal;
         }
 
-            .cate .product .price span {
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 13px;
-                color: #757575;
-                text-decoration: line-through;
-                font-weight: 300;
-            }
-
-            .cate .product .price strong {
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 13px;
-                color: #b10e0e;
-                font-weight: bold;
-                font-weight: normal;
-            }
-
-            .cate .product .price label {
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 12px;
-                color: #fff;
-                font-weight: 600;
-                border-radius: 3px;
-                background: #de2000;
-                width: 32px;
-                height: 20px;
-                line-height: 20px;
-                text-align: center;
-            }
-
-        .cate .product .buy {
-            display: block;
-            overflow: hidden;
-            font-size: 13px;
-            color: #008848;
+        .product .price label {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 3px;
+            background: #de2000;
+            width: 32px;
+            height: 20px;
+            line-height: 20px;
             text-align: center;
-            text-transform: uppercase;
-            padding: 10px 0;
-            position: absolute;
-            left: 20px;
-            right: 20px;
-            bottom: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            border: 1px solid #008848;
         }
+
+    .product .buy {
+        display: block;
+        overflow: hidden;
+        font-size: 13px;
+        color: #008848;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 0;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid #008848;
+    }
 
 
 .viewmore.noafter {
