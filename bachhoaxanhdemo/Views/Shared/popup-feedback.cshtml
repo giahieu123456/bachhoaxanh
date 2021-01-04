@@ -1,0 +1,28 @@
+﻿<div class="popup-cmt" style="display:none;">
+    <div class="confirm-cmt">
+        <h1 class="title-cmt">
+            Bách hoá xanh xin hân hạnh được hỗ trợ quý khách
+        </h1>
+        <form id="frmContact" onsubmit="return SubmitContact('#frmContact')" method="post">
+            <div class="js-float-label-wrapper">
+                <textarea name="txtContent" class="txtContent" rows="3" placeholder="Nội dung (xin quý khách mô tả chi tiết)"></textarea>
+            </div>
+            <div class="gendercomment">
+                <input type="radio" name="gendercmt" /> Anh
+                <input type="radio" name="gendercmt" /> Chi
+            </div>
+            <input class="fullname" type="text" name="txtFullName" placeholder="Họ và tên của quý khách">
+            <input class="phone-number" type="number" placeholder="Nhập số điện thoại (khi cần BachhoaXANH gọi lại)" maxlength="11">
+            <input class="email" type="text" name="txtEmail" placeholder="Email của quý khách">
+
+            <input type="hidden" name="txtSex" value="1">
+            <div class="contact-vvbtn">
+                <button class="submit-cmt" title="Gửi góp ý cho Bách hóa Xanh" type="submit">Gửi góp ý</button>
+            </div>
+            <div class="close-cmt">
+                Đóng
+            </div>
+        </form>
+
+    </div>
+</div>

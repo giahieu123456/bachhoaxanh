@@ -1,0 +1,449 @@
+﻿.m-footer {
+    background-color: #e9edf0;
+    margin: 0px auto 0;
+    width: 1200px;
+}
+
+.main-footer {
+    float:right;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width:980px;
+
+    height: 200px;
+}
+
+.footer-order {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    vertical-align: middle;
+}
+.detail {
+    border-top: solid 0.5px #e9edf0;
+    margin-top: 10px;
+    display: flex;
+}
+
+.detail-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.callcenter {
+    padding: 0px 0px 0px 10px;
+    color: #008848;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bhx-call {
+    display: inline-block;
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012011425.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    width: 16px;
+    height: 16px;
+    background-position: -183px -268px;
+}
+
+.callcenter > a {
+    color: #008848;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.detail-right {
+    width: 50%;
+}
+
+.linkstatic {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-1 {
+    margin: 7px 0px 5px 10px;
+    display: flex;
+}
+
+.link-footer {
+    flex-basis: 33%;
+}
+
+.link-2 {
+    margin: 7px 0px 0px 10px;
+    display: flex;
+}
+
+.link-3 {
+    display: flex;
+}
+
+.recruitment {
+    border-radius: 3px;
+    background-color: #ff6a00;
+    height: 33px;
+    width: 102px;
+    margin-top: 8px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-3 > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    color: blue;
+    margin-left: 10px
+}
+
+
+.link {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+    .link:visited {
+        color: none;
+    }
+
+.dki-product {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.bhx-footer-purchase {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012011425.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -321px -270px;
+    width: 15px;
+    height: 15px;
+}
+
+.purchaselink {
+    color: #008848;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo-member {
+    display: flex;
+    width: 100%;
+    margin: 5px 0px 0px 10px;
+}
+    .logo-member > span {
+        font-size: 12px;
+        margin-right: 5px;
+        width: 117px;
+    }
+
+    .link-member {
+        display: flex;
+        width: 372px;
+        height: 37px;
+    }
+
+    .link-member > a {
+        flex-basis: 33%;
+    }
+
+.bhx-tgdd {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012011425.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -171px -68px;
+    width: 115px;
+    height: 18px;
+}
+
+.bhx-dmx {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012011425.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -171px -88px;
+    width: 115px;
+    height: 18px;
+}
+
+.bhx-maiam {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012011425.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -150px -240px;
+    width: 63px;
+    height: 18px;
+}
+
+.bhx-stores {
+    display: flex;
+    margin-left: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 0 5px;
+    width: 360px;
+}
+
+    .bhx-stores > a {
+        text-decoration: none;
+    }
+
+.bhx-store {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012011425.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -154px -267px;
+    width: 27px;
+    height: 18px;
+}
+
+.promotion {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    color: red;
+}
+
+    .promotion > a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.stores-about-to-open {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 50px;
+    color: red;
+}
+
+    .stores-about-to-open > a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.social {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .social >a{
+        margin-right:10px;    }
+
+    .bhx-bct {
+        display: inline-block;
+        background-position: -286px -110px;
+        width: 92px;
+        height: 32px;
+        background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012031035.png);
+        background-repeat: no-repeat;
+        background-size: 500px auto;
+    }
+
+.yt-subscribe {
+    margin: 0px 0px 7px 5px;
+    text-align: start;
+    overflow: hidden;
+    height: 20px;
+    width: 60px;
+    background-color: red;
+    color: white;
+    border:solid 1px red;
+    border-radius:2px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.footer-order-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.footer-order-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+    .footer-order-right > a {
+        text-decoration-line: none;
+        color: blue;
+    }
+
+ .feedback {
+    height: 40px;
+    width: 40px;
+    border: solid 1px #008848;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 50px;
+    position: fixed;
+}
+
+    .feedback .img-feedback {
+        background-repeat: no-repeat;
+        background: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202011232343.png);
+        background-size: 500px auto;
+        width: 40px;
+        height: 40px;
+        display: block;
+        background-position: -131px -143px;
+    }
+
+.backtop {
+    font-size: 10px;
+    background: rgba(70,70,70,.8392156862745098);
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border: solid 1px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    line-height: 11.3px;
+}
+.popup-cmt {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding-top: 100px;
+    padding-left: 555px;
+}
+
+.popup-cmt .confirm-cmt {
+    border: solid 1px white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 515px;
+    height: 480px;
+    overflow: hidden;
+}
+
+.popup-cmt .confirm-cmt .title-cmt {
+    margin: 10px 10px 0px 10px;
+    font-size: 22px;
+    color: #333;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    padding-left: 10px;
+    border-left: 5px solid #008848;
+}
+
+.confirm-cmt #frmContact .js-float-label-wrapper {
+    margin-left: 10px;
+}
+
+#frmContact .js-float-label-wrapper .txtContent {
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    height: 80px;
+    width: 485px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+}
+
+#frmContact .gendercomment > input {
+    margin: 10px;
+}
+
+.confirm-cmt #frmContact .fullname {
+    margin: 0px 10px 0px 10px;
+    border-radius: 4px;
+    padding: 10px;
+    height: 40px;
+    width: 485px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+}
+
+.confirm-cmt #frmContact .phone-number {
+    margin: 0px 10px 0px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    height: 40px;
+    width: 485px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+}
+
+.confirm-cmt #frmContact .email {
+    margin: 10px 10px 0px 10px;
+    display: inline-block;
+    padding: 10px;
+    height: 40px;
+    width: 485px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+    border-radius: 4px;
+}
+
+#frmContact .contact-vvbtn .submit-cmt {
+    margin: 14px 10px 0px 10px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 0;
+    border: 1px solid #008848;
+    border-radius: 4px;
+    background: #008848;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 95%;
+    font-weight: 600;
+    min-width: unset;
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(0,0,0,.25);
+    outline: none;
+}
+
+.close-cmt {
+    margin: 0px 10px 0px 10px;
+    padding: 10px 0px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #008848;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    width: 95%;
+    height: 42px;
+}
