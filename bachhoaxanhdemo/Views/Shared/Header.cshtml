@@ -65,26 +65,26 @@
 
                     @foreach (var item in @ViewBag.listCategories)
                     {
-                        if (@item.idCategory != 1)
+                        if (@item.idCategory !=1)
                         {
-                            <li>
-                                <div class="nav-parent">@item.categoryName</div>
-                                <div class="nav-item">
+                        <li>
+                            <div class="nav-parent">@item.categoryName</div>
+                            <div class="nav-item">
 
-                                    @foreach (var title in @ViewBag.listTitle)
+                                @foreach (var title in @ViewBag.listTitle)
+                                {
+                                    if (title.idCategory == item.idCategory)
                                     {
-                                        if (title.idCategory == item.idCategory)
-                                        {
-                                            <div class="parent">
-                                                <a href="@Url.Action("Index","ProductTitle",new {id=title.idProductTitle })" class="link-hover menu-haschild">@title.productTitleName</a>
-                                            </div>
-                                        }
+                                        <div class="parent">
+                                            <a href="@Url.Action("productTittle", "Home")" class="link-hover menu-haschild">@title.productTitleName</a>
+                                        </div>
                                     }
+                                }
 
 
 
-                                </div>
-                            </li>
+                            </div>
+                        </li>
                         }
                     }
 
