@@ -13,22 +13,23 @@ namespace bachhoaxanhdemo.Controllers
 
     public class HomeController : Controller
     {
-        public bhxEntities1 _dbBhx = new bhxEntities1();
+        public bhxEntities2 _dbBhx2 = new bhxEntities2();
 
 
 
         public ActionResult Index()
         {
-            var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).ToList();
-            var listTitle = _dbBhx.ProductTitles.OrderBy(x => x.idProductTitle).ToList();
+            var listCategories = _dbBhx2.Categories.OrderBy(x => x.idCategory).ToList();
+            var listTitle = _dbBhx2.ProductTitles.OrderBy(x => x.idProductTitle).ToList();
             ViewBag.listCategories = listCategories;
             ViewBag.listTitle = listTitle;
             return View();
         }
-        
+       
+
         public ActionResult loadProductTitle(int idCate)
         {
-            var listProductTitle = _dbBhx.ProductTitles.OrderBy(x => x.idCategory).ToList();
+            var listProductTitle = _dbBhx2.ProductTitles.OrderBy(x => x.idCategory).ToList();
             return ViewBag;
         }
 
@@ -47,7 +48,7 @@ namespace bachhoaxanhdemo.Controllers
 
 
             //ViewBag.listProductByCate = productByCate;
-            var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).ToList();
+            var listCategories = _dbBhx2.Categories.OrderBy(x => x.idCategory).ToList();
             
             return View(listCategories);
         }
@@ -67,9 +68,9 @@ namespace bachhoaxanhdemo.Controllers
 
 
             //ViewBag.listProductByCate = productByCate;
-            List<DemoModel> model1 = (from p in _dbBhx.Products
-                                      join pt in _dbBhx.ProductTitles on p.idProductTitle equals pt.idProductTitle
-                                      join c in _dbBhx.Categories on pt.idCategory equals c.idCategory
+            List<DemoModel> model1 = (from p in _dbBhx2.Products
+                                      join pt in _dbBhx2.ProductTitles on p.idProductTitle equals pt.idProductTitle
+                                      join c in _dbBhx2.Categories on pt.idCategory equals c.idCategory
                                       where c.idCategory == idcate
                                       select new DemoModel { idProduct = p.idProduct, productName = p.productName, productPrice = p.productPrice, image = p.image, idCategory = c.idCategory }).OrderBy(x => x.idCategory).Take(4).ToList();
 
@@ -96,9 +97,9 @@ namespace bachhoaxanhdemo.Controllers
         public JsonResult LoadMoreProduct(int idcate, int page_index)
         {
 
-            var model1 = (from p in _dbBhx.Products
-                          join pt in _dbBhx.ProductTitles on p.idProductTitle equals pt.idProductTitle
-                          join c in _dbBhx.Categories on pt.idCategory equals c.idCategory
+            var model1 = (from p in _dbBhx2.Products
+                          join pt in _dbBhx2.ProductTitles on p.idProductTitle equals pt.idProductTitle
+                          join c in _dbBhx2.Categories on pt.idCategory equals c.idCategory
                           where c.idCategory == idcate
                           select new DemoModel { idProduct = p.idProduct, productName = p.productName, productPrice = p.productPrice, image = p.image, idCategory = c.idCategory }).OrderBy(x => x.idCategory).Skip(page_index).Take(4).ToList();
 

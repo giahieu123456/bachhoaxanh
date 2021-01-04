@@ -1,4 +1,7 @@
 ﻿/*Reset CSS*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     font: 14px/18px 'Poppins', Helvetica, sans-serif;
     min-width: 1200px;
