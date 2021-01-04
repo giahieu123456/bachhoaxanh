@@ -133,40 +133,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BHX.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BHX.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BHX.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BHX.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BHX.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BHX.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DemoModel.cs" />
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\Model2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,26 +203,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\BHX.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BHX.Context.cs</LastGenOutput>
-      <DependentUpon>BHX.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\BHX.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BHX.edmx</DependentUpon>
-      <LastGenOutput>BHX.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Models\Model2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model2.edmx</DependentUpon>
@@ -270,20 +220,6 @@
     <Content Include="Scripts\Home\scrollbacktop.js" />
     <Content Include="Scripts\Utility\bootstrap.js" />
     <Content Include="Scripts\Utility\bootstrap.min.js" />
-    <EntityDeploy Include="Models\BHX.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BHX.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BHX.edmx.diagram">
-      <DependentUpon>BHX.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="Models\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\Model2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model2.Designer.cs</LastGenOutput>
