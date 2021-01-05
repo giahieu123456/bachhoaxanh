@@ -27,47 +27,22 @@ namespace bachhoaxanhdemo.Controllers
         }
        
 
-        public ActionResult loadProductTitle(int idCate)
+      /*  public ActionResult loadProductTitle(int idCate)
         {
             var listProductTitle = _dbBhx2.ProductTitles.OrderBy(x => x.idCategory).ToList();
             return ViewBag;
         }
-
+*/
         public ActionResult GroupFeature()
         {
-
-            //var listProduct = _dbBhx.Products.OrderBy(x => x.idProduct).Take(4);
-
-            //var productByCate = (from p in _dbBhx.Products.ToList()
-            //                     join pt in _dbBhx.ProductTitles on p.idProductTitle equals pt.idProductTitle
-            //                     join c in _dbBhx.Categories on pt.idCategory equals c.idCategory
-
-            //                     select new DemoModel { LIST_PRODUCT = p, ID_CATE = c.idCategory }).ToList();
-
-
-
-
-            //ViewBag.listProductByCate = productByCate;
             var listCategories = _dbBhx2.Categories.OrderBy(x => x.idCategory).ToList();
-            
+   
             return View(listCategories);
         }
 
         public ActionResult GroupFeatureProduct(int idcate)
         {
 
-            //var listProduct = _dbBhx.Products.OrderBy(x => x.idProduct).Take(4);
-
-            //var productByCate = (from p in _dbBhx.Products.ToList()
-            //                     join pt in _dbBhx.ProductTitles on p.idProductTitle equals pt.idProductTitle
-            //                     join c in _dbBhx.Categories on pt.idCategory equals c.idCategory
-
-            //                     select new DemoModel { LIST_PRODUCT = p, ID_CATE = c.idCategory }).ToList();
-
-
-
-
-            //ViewBag.listProductByCate = productByCate;
             List<DemoModel> model1 = (from p in _dbBhx2.Products
                                       join pt in _dbBhx2.ProductTitles on p.idProductTitle equals pt.idProductTitle
                                       join c in _dbBhx2.Categories on pt.idCategory equals c.idCategory

@@ -130,12 +130,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ExampleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductTitlesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProdByTitle.cs" />
     <Compile Include="Models\DemoModel.cs" />
     <Compile Include="Models\Model2.Context.cs">
       <AutoGen>True</AutoGen>
@@ -173,6 +175,7 @@
     <Content Include="Content\css\owl.theme.default.min.css" />
     <Content Include="Content\css\section.css" />
     <Content Include="Content\css\slidebanner.css" />
+    <Content Include="Content\css\voucher.css" />
     <Content Include="Content\image\bhxdesk%402x.v202011232343.png" />
     <Content Include="Content\image\bhxdesk%402x.v202012221436.png" />
     <Content Include="Content\image\bhxicon.ico" />
@@ -218,6 +221,7 @@
     <Content Include="Scripts\Home\owl.carousel.min.js" />
     <Content Include="Scripts\Home\popupfeedback.js" />
     <Content Include="Scripts\Home\scrollbacktop.js" />
+    <Content Include="Scripts\Home\voucher.js" />
     <Content Include="Scripts\Utility\bootstrap.js" />
     <Content Include="Scripts\Utility\bootstrap.min.js" />
     <EntityDeploy Include="Models\Model2.edmx">
@@ -263,6 +267,9 @@
     <Content Include="Views\Home\GroupFeatureProduct.cshtml" />
     <Content Include="Views\Shared\footer.cshtml" />
     <Content Include="Views\Shared\popup-feedback.cshtml" />
+    <Content Include="Views\Shared\voucher.cshtml" />
+    <Content Include="Views\ProductTitles\GroupFeatureProductByTitle.cshtml" />
+    <Content Include="Views\ProductTitles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

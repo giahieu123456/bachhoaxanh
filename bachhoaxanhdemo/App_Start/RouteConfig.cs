@@ -15,9 +15,9 @@ namespace bachhoaxanhdemo
 
             
             routes.MapRoute(
-                "ProductTitle",
+                "ProductTitles",
                 "title-{id}",
-                new { controller = "ProductTitle", action = "Index", id = UrlParameter.Optional }
+                new { controller = "ProductTitles", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(

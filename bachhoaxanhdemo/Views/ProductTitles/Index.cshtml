@@ -1,4 +1,6 @@
-﻿@{
+﻿
+
+@{
     ViewBag.Title = "Siêu thị Bách hóa XANH - Mua bán thực phẩm, sản phẩm gia đình";
     ViewBag.Logo = "../Content/image/favicon.ico";
     ViewBag.Css = "~/Content/homecss";
@@ -15,19 +17,17 @@
 
 <section>
     <aside class="colcontent">
-        @Html.Partial("SlideBanner")
-        @Html.Partial("GroupCategory")
-        @Html.Partial("GroupFeatureFresh")
-        @Html.Action("GroupFeature")
-        @Html.Partial("voucher")
+
+        @Html.Action("GroupFeatureProductByTitle")
+
     </aside>
-    <div class="clr"></div>ss
+    <div class="clr"></div>
 </section>
 
 
 @Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/owl.carousel")
-@section scripts{
-    <script src="~/Scripts/Home/LoadMore.js"></script>
-}
+
+
+
+
 

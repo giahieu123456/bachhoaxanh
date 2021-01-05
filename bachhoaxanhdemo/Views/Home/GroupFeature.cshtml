@@ -1,9 +1,8 @@
 ﻿
-
 @{
     ViewBag.Title = "GroupFeature";
     Layout = null;
-    //var modelount = ViewData["modelcount"] != null ? Convert.ToInt32(ViewData["modelcount"]) : 0;
+    
 }
 
 @foreach (var cate in Model)
@@ -16,34 +15,7 @@
                 @cate.categoryName
             </h2>
             <ul class="cate cateproduct" data-id=@cate.idCategory id="catenow">
-                @Html.Action("GroupFeatureProduct", "Home", new { idcate = cate.idCategory })
-
-                @*@foreach (var item in ViewBag.listProductByCate)
-                    {
-                        if (item.ID_CATE == cate.idCategory)
-                        {
-                            //{ a = a + 1; }
-                            //if (a == 4) break;
-                            <li class="product">
-                                <a href="#" title="Cải thìa túi 500g">
-                                    <div class="boximg center" title="Cải thìa túi 500g">
-                                        <img width="160" height="160" alt="bg-Lốc 4 hộp sữa tiệt trùng Dutch Lady 170ml" src=@(item.LIST_PRODUCT.image != null ? item.LIST_PRODUCT.image.Split(' ')[0] : "https://cdn.tgdd.vn/Products/Images/2943/229508/bhx/thung-16-hop-sua-dau-nanh-dau-den-oc-cho-hanh-nhan-yaho-190ml-202011060932118206_300x300.jpg") />
-                                    </div>
-                                    <div class="product-name">@(item.LIST_PRODUCT.productName ?? item.LIST_PRODUCT.productName )</div>
-                                    <div class="price">
-                                        <span>22.000đ</span>
-                                        <strong>
-                                            @(item.LIST_PRODUCT.productPrice?.ToString("#,##0₫"))
-                                        </strong>
-                                        <label>-24%</label>
-                                    </div>
-                                </a>
-                                <a class="buy">Chọn mua</a>
-                            </li>
-                        }
-
-                    }*@
-
+                @Html.Action("GroupFeatureProduct", "Home", new { idcate = cate.idCategory })            
             </ul>
 
 

@@ -277,6 +277,17 @@
     vertical-align: middle;
 }
 
+    .footer-order-left .bhx-sship {
+        display: inline-block;
+        background-position: -55px -261px;
+        margin-right:10px;
+        width: 27px;
+        height: 27px;
+        background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012031035.png);
+        background-repeat: no-repeat;
+        background-size: 500px auto;
+    }
+
 .footer-order-right {
     display: flex;
     justify-content: center;
@@ -289,8 +300,21 @@
         text-decoration-line: none;
         color: blue;
     }
+.footer-order-right .bhx-swap {
+    min-width: 27px;
+    width: 27px;
+    height: 30px;
+    margin-right: 15px;
+    background-position: -122px -261px;
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202101041331.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+}
 
- .feedback {
+.feedback {
     height: 40px;
     width: 40px;
     border: solid 1px #008848;
@@ -303,11 +327,12 @@
     .feedback .img-feedback {
         background-repeat: no-repeat;
         background: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202011232343.png);
+       
         background-size: 500px auto;
         width: 40px;
         height: 40px;
         display: block;
-        background-position: -131px -143px;
+        background-position: -132px -144px;
     }
 
 .backtop {
@@ -447,3 +472,19 @@
     width: 95%;
     height: 42px;
 }
+.m-footer .copyright {
+    display: block;
+    width: 980px;
+    margin: auto;
+    font-size: 10px;
+    color: #999;
+    text-align: center;
+    background: #e9edf0;
+    padding: 5px 0;
+    float: right;
+    margin-bottom:20px;
+}
+    .m-footer .copyright > a {
+        color: #999;
+        text-decoration: underline;
+    }

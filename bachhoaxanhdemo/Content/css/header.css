@@ -1,4 +1,7 @@
 ﻿/*Reset CSS*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     font: 14px/18px 'Poppins', Helvetica, sans-serif;
     min-width: 1200px;
@@ -13,7 +16,7 @@ a {
 
 /*Ultility Class BHX Icon*/
 [class^="bhx-"], [class*="bhx-"] {
-    background-image: url('../image/bhxdesk@2x.v202012221436.png');
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202101050939.png);
     background-repeat: no-repeat;
     background-size: 500px auto;
     display: inline-block;
