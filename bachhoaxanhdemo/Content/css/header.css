@@ -479,11 +479,8 @@ nav li {
         color: #1d1d1d;
         cursor: pointer;
     }
-
         nav li .nav-parent:before, nav li .nav-parent:after {
             content: '';
-            width: 0;
-            height: 0;
             border-top: 4px solid #979797;
             border-left: 4px solid transparent;
             border-right: 4px solid transparent;
@@ -491,10 +488,20 @@ nav li {
             right: 5px;
             top: 5px;
         }
+    nav li .nav-parent-open:before, nav li .nav-parent-open:after {
+        content: '';
+        border-top: 4px solid #979797;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        position: absolute;
+        right: 5px;
+        top: 2px;
+        transform: rotate(180deg);
+    }
 
-.new2020 nav li .nav-parent:after {
-    border-top-color: #fff;
-}
+            .new2020 nav li .nav-parent:after {
+                border-top-color: #fff;
+            }
 
 nav li .nav-parent:after {
     border-top-width: 4px;

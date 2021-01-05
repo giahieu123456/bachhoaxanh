@@ -221,6 +221,7 @@
     <Content Include="Scripts\Home\owl.carousel.min.js" />
     <Content Include="Scripts\Home\popupfeedback.js" />
     <Content Include="Scripts\Home\scrollbacktop.js" />
+    <Content Include="Scripts\Home\upanddownproduct.js" />
     <Content Include="Scripts\Home\voucher.js" />
     <Content Include="Scripts\Utility\bootstrap.js" />
     <Content Include="Scripts\Utility\bootstrap.min.js" />
