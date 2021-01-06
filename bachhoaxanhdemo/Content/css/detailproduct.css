@@ -1,0 +1,688 @@
+﻿.main{
+    display:flex;
+}
+.container-ctsp {
+    width: 100back-homepage display: grid;
+    grid-template-rows: auto auto auto;
+}
+    /*backhome */
+    .container-ctsp .introduce-ctsp {
+        margin-left: 220px;
+    }
+    .container-ctsp .introduce-ctsp .back-homepage {
+        height: 23px;
+        padding: 11px;
+        background-color: white;
+    }
+    /*product-ctsp */
+    .container-ctsp .introduce-ctsp .product-ctsp {
+        height: 516px;
+        display: flex;
+        background-color: white;
+       
+    }
+/*carousel ctsp*/
+.introduce-ctsp .product-ctsp .boxcarousel {
+    height: 418px
+}
+
+.product-ctsp .boxcarousel #carousel-ctsp {
+    margin-top: 16px;
+    margin-left: 7px;
+    width: 530px;
+    height: 401px;
+    position: relative;
+    cursor: pointer;
+}
+
+.boxcarousel #carousel-ctsp .bnt-next-ctsp {
+    outline: none;
+    border: none;
+    height: 59px;
+    width: 24px;
+    position: absolute;
+    bottom: 163px;
+    left: 0px;
+}
+
+    .boxcarousel #carousel-ctsp .bnt-next-ctsp > div {
+        height: 5px;
+        width: 5px;
+        border-top: solid 2px #999;
+        border-left: solid 2px #999;
+        transform: rotate(-45deg);
+    }
+
+.boxcarousel #carousel-ctsp .bnt-prew-ctsp {
+    border: none;
+    height: 59px;
+    width: 24px;
+    position: absolute;
+    bottom: 163px;
+    right: 0px;
+    outline: none;
+}
+
+    .boxcarousel #carousel-ctsp .bnt-prew-ctsp > div {
+        height: 5px;
+        width: 5px;
+        border-top: solid 2px #999;
+        border-left: solid 2px #999;
+        transform: rotate(135deg);
+    }
+
+.product-ctsp .boxcarousel .list-carousel {
+    display: flex;
+}
+
+.boxcarousel .list-carousel .thumbpro {
+    height: 60px;
+    width: 80px;
+    margin: 5px;
+}
+/*select-ctsp*/
+.introduce-ctsp .product-ctsp .select-ctsp {
+    width: 438px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-ctsp .select-ctsp .nameproduct {
+    margin: 13px 0px 0px 15px;
+    overflow: hidden;
+    line-height: 1.3em;
+    font-size: 22px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.product-ctsp .select-ctsp .boxprice {
+    margin-left: 14px;
+    display: inline-block;
+    font-size: 24px;
+    color: #c10017;
+    vertical-align: middle;
+}
+
+.product-ctsp .select-ctsp .clickbuy {
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    background: #008848;
+    font-size: 18px;
+    color: #fff !important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 16px 0;
+    margin: 10px 0px 10px 20px;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.product-ctsp .select-ctsp .if-tc {
+    margin-left: 20px;
+}
+
+    .product-ctsp .select-ctsp .if-tc > P {
+        margin-top: 5px;
+    }
+/*related-products*/
+.related-products {
+    margin-top: 10px;
+    margin-left: 220px;
+}
+
+.container-ctsp .info-product {
+    margin-bottom: 10px;
+    
+    margin-top: 5px;
+    display: flex;
+    background-color: white;
+    margin-left: 220px;
+}
+
+    .container-ctsp .info-product .info-left {
+        width: 568px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-left: 13px;
+    }
+
+.info-product .info-left .info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-left .info-details > ul {
+    list-style: none;
+}
+
+.info-details > ul > li {
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #ecf0f1;
+    padding: 10px 5px;
+}
+
+    .info-details > ul > li > div {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 13px;
+        color: #4a4a4a;
+        width: 80%;
+    }
+
+    .info-details > ul > li > span {
+        display: inline-block;
+        vertical-align: top;
+        overflow: hidden;
+        font-size: 13px;
+        color: #999;
+        width: 18%;
+    }
+
+.info-left .info-details .textinfpro {
+    display: block;
+    padding: 15px 0;
+    background: #fff;
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+    .info-left .info-details .textinfpro:before {
+        position: relative;
+        content: '';
+        height: 25px;
+        width: 3px;
+        background-color: #008848;
+        top: 5px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+.info-left .info-detail .infoproduct {
+    display: block;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+
+.info-product .info-left .vote-Product {
+    padding: 10px;
+    border-top: 3px solid #e9edf0;
+    border-bottom: 3px solid #e9edf0;
+}
+
+.info-left .vote-Product .messageConfirm {
+    float: left;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.info-left .vote-Product .icon_Product {
+    display: flex;
+    margin-left: 5px;
+}
+
+    .info-left .vote-Product .icon_Product > a {
+        text-decoration: none;
+        color: #288ad6;
+        border: 1px solid #288ad6;
+        border-radius: 4px;
+        width: 130px;
+        padding-top: 2px;
+        margin-right: 6px;
+        line-height: 1px;
+        box-sizing: border-box;
+        font-size: 13px;
+        cursor: pointer;
+        display: inline;
+        white-space: nowrap;
+        text-align: center;
+        padding-right: 2px;
+    }
+
+    .info-left .vote-Product .icon_Product .icon-smile-s {
+        width: 16px;
+        height: 18px;
+        background-position: -28px -78px;
+        background-size: 160px auto;
+        margin-top: 1px;
+        margin-right: 5px;
+        background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite@2x-checkout.v202012071625.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+
+    .info-left .vote-Product .icon_Product .icon-cry-s {
+        width: 17px;
+        height: 20px;
+        background-position: -27px -57px;
+        background-size: 160px auto;
+        margin-right: 5px;
+        background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite@2x-checkout.v202012071625.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+
+.info-left .vote-Product .dialog2 {
+    display: none;
+}
+
+.info-left .vote-Product .showBtnSend {
+    height: 55px;
+    width: 98%;
+    outline: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    flex-direction: column;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border: solid 1px #d6d6d6;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.info-left .vote-Product .Btn-Send {
+    outline: none;
+    background: #008848;
+    color: #fff;
+    border-radius: 4px;
+    width: calc(100%);
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.info-left .vote-Product .message-done {
+    display: none;
+}
+
+.info-left .vote-Product .message-thanks {
+    display: none;
+}
+
+.info-product .comment {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.info-left .comment .comment-rating {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.info-left .comment .rating-box {
+    width: calc(97% - 2px);
+    margin: 15px 10px 0px 10px;
+    display: flex;
+    border: solid 0.5px #d6d6d6;
+    border-radius: 4px;
+}
+
+.comment-rating .rating-box .imgrating {
+    width: 25%;
+    padding: 10px 20px;
+    text-align: right;
+    display: inline-block;
+}
+
+.rating-box .imgrating .bg {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-rating .rating-box .btnrating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+}
+
+.rating-box .btnrating > span {
+    font-size: 12px;
+    color: #008848;
+}
+
+.rating-box .btnrating .btnsendrating {
+    width: 100%;
+    height: 30px;
+    background: #008848;
+    color: #fff;
+    border: 1px solid #008848;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    text-transform: unset;
+    outline: none;
+}
+
+.rating-box .btnrating .box-chooserate {
+    display: none;
+    width: 300%;
+}
+
+.btnrating .box-chooserate .chooserate {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.btnrating .chooserate .box-star {
+    margin: 5px auto;
+    display: block;
+}
+
+.chooserate .box-star .star {
+    margin: 5px auto;
+}
+
+.chooserate .box-star .bhx-starblack {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012082255.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -80px -108px;
+    width: 21px;
+    height: 24px;
+}
+
+.chooserate .box-star .bhx-stargolden {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/desktop/bhxdesk@2x.v202012082255.png);
+    background-repeat: no-repeat;
+    background-size: 500px auto;
+    display: inline-block;
+    background-position: -100px -108px;
+    width: 21px;
+    height: 24px;
+}
+
+.info-left .comment .formrating {
+    margin-top: 15px;
+    display: none;
+}
+
+.comment .formrating .ratinfo {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.formrating .ratinfo .js-float-label-wrapper {
+    width: 550px;
+    margin: 0px 0px 0px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.ratinfo .js-float-label-wrapper .cmt-content {
+    border: none;
+    padding: 10px 10px 20px 10px;
+    transition: all .5s ease;
+    resize: none;
+    box-sizing: border-box;
+    max-height: 104px;
+    min-height: 104px;
+    width: 100%;
+    outline: none;
+}
+
+.comment .formrating .info {
+    margin: 5px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.formrating .info > div {
+    margin-top: 20px;
+}
+
+.formrating .info .row {
+    display: flex;
+    width: 550px;
+}
+
+.formrating .info .gender {
+    flex-basis: 50%;
+    width: 104px !important;
+    text-align: left;
+    margin: 16px 0 16px;
+    display: inline-block;
+    float: left;
+}
+
+.info .gender .chon {
+    margin-left: 10px;
+    font: 14px/18px Helvetica,Arial,sans-serif;
+    color: #333;
+    outline: none;
+}
+
+.gender .chon > input {
+    margin-right: 4px;
+    background-color: blue;
+}
+
+.info .row .upimage {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #288ad6;
+}
+
+.row .upimage .bhx-p-iconask {
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/product@2x.v202012290945.png);
+    background-size: 400px auto;
+    background-position: -227px -72px;
+    width: 27px;
+    height: 23px;
+    display: inline-block;
+}
+
+.formrating .info .txt {
+    padding: 10px 10px 20px 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 3px;
+    width: 550px;
+    height: 35px;
+    text-indent: 10px;
+}
+
+.comment .formrating > button {
+    outline: none;
+    margin-top: 10px;
+    margin-right: 0;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    background: #008945;
+    float: right;
+    box-shadow: 0 2px 2px rgba(0,0,0,.25);
+    width: 100%;
+}
+
+.container-ctsp .info-product .info-right {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    overflow: hidden;
+    background: #fff;
+    width: 375px;
+    margin-left: 27px;
+}
+
+.info-product .info-right .groupcate {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 5px;
+    background: #fff;
+    border-radius: 4px;
+    min-height: 222px;
+}
+
+.info-right .groupcate .namegroup {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 25px 10px 15px 10px;
+}
+
+.info-right .groupcate .box-listgroup {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.groupcate .box-listgroup .listgroup-up {
+    display: flex;
+}
+
+.groupcate .box-listgroup .listgroup-down {
+    display: flex;
+}
+
+.info-right .groupcate .listgroup > a {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 15px;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    color: #288ad6;
+    cursor: pointer;
+}
+
+.groupcate .listgroup > a > image {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 5px;
+    border-radius: 50px;
+}
+
+.groupcate .listgroup > a > span {
+    font-size: 12px;
+}
+
+.info-product .info-right .homehews {
+    min-height: 312px;
+}
+
+.info-right .homehews .bartitle {
+    display: flex;
+    overflow: hidden;
+}
+
+.info-right .homehews > a {
+    display: flex;
+    border-top: 1px solid #f3f3f3;
+    padding: 12px 0;
+    margin: 0 10px;
+    text-decoration: none;
+    color: black
+}
+
+.homehews > a > p {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.homehews .bartitle .hometitle {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow: hidden;
+    font-size: 14px;
+    background: #fff;
+    padding: 15px 10px 10px;
+    color: #4a4a4a;
+}
+
+.homehews .bartitle .viewother {
+    text-align: center;
+    float: right;
+    margin-right: 10px;
+    padding-top: 15px;
+    text-decoration: none;
+}
+
+.textinfpro {
+    margin-left: 6px;
+    display: block;
+    padding: 15px 0;
+    background: #fff;
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+.blurred {
+    opacity: 0.2;
+}
+
+.popup-cmt .confirm-cmt-ctsp {
+    min-height: 110px;
+    max-width: 417px;
+    padding: 10px 6px 0 6px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    outline: 0;
+    background-color: #fff;
+}
+
+.popup-cmt .submit-cmt-ctsp {
+    position: relative;
+    left: 154px;
+    top: 42px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #008945;
+    border: 1px solid #008945;
+    padding: 0 10px !important;
+    text-transform: initial;
+    font-weight: 700;
+    border-radius: 5px;
+    min-width: 88px;
+    min-height: 35px;
+    outline: 0;
+}

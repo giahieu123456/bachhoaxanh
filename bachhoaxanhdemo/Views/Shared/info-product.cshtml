@@ -1,0 +1,93 @@
+﻿<div class="info-product">
+    <div class="info-left">
+        @Html.Partial("info-detail")
+        <div class="vote-Product">
+            <div class="main-vote-product">
+                <div class="messageConfirm"><span data-us="gender">Anh</span> có hài lòng với thông tin sản phẩm này không? </div>
+                <div class="icon_Product">
+                    <a class="bl-vote" onclick="Page_Product(1)">
+                        <i class="icon-smile-s"></i>Hài lòng
+                    </a>
+                    <a class="bl-vote-sad" onclick="Page_Product(2)">
+                        <i class="icon-cry-s"></i>Không hài lòng
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="dialog2">
+                <div class="message">BachhoaXANH.com mong nhận đánh giá của <span data-us="gender">Anh</span> để cải tiến chất lượng dịch vụ tốt hơn.</div>
+                <textarea class="showBtnSend" onclick="showBtnSend()" placeholder="Mời nhập nội dung góp ý!"></textarea>
+                <button class="Btn-Send" onclick="SendVoteProduct()">GỬI </button>
+            </div>
+            <div class="message-done">Cảm ơn <span data-us="gender">Anh</span> đã đóng góp để giúp BachhoaXANH.com cải tiến chất lượng dịch vụ tốt hơn!</div>
+            <div class="message-thanks"><div class="icon_Product"> <i class="icon-smile-s"></i> Cảm ơn <span data-us="gender">Anh</span> đã đánh giá thông tin sản phẩm</div> </div>
+        </div>
+        <div class="comment">
+            <div class="comment-rating">
+                <div><h4>Đánh giá sản phẩm</h4> </div>
+                <div class="rating-box">
+                    <div class="imgrating"><img class="lazy bg initial loaded" data-src="//cdn.tgdd.vn/bachhoaxanh/www/Content/images/Group-12.png" alt="Siêu thị Bách hóa XANH" src="//cdn.tgdd.vn/bachhoaxanh/www/Content/images/Group-12.png" data-was-processed="true"></div>
+                    <div class="btnrating">
+                        <div class="sendrating">
+                            <button class="btnsendrating" id="sendRating">Hãy là người đầu tiên đánh giá</button>
+                            <div class="box-chooserate">
+                                <div class="chooserate">
+                                    <span class="s">Gửi đánh giá của anh</span>
+                                    <span class="box-star">
+                                        <a class="bhx-starblack star" data-index="1"></a>
+                                        <a class="bhx-starblack star" data-index="2"></a>
+                                        <a class="bhx-starblack star" data-index="3"></a>
+                                        <a class="bhx-starblack star" data-index="4"></a>
+                                        <a class="bhx-starblack star" data-index="5"></a>
+                                    </span>
+                                    <span class="rstar"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <span class="txt-cmt">Đánh giá của bạn sẽ giúp mọi người hiểu thêm về sản phẩm !</span>
+                    </div>
+                </div>
+            </div>
+            <form class="formrating">
+                <div class="ratinfo">
+                    <div class="js-float-label-wrapper">
+                        <textarea class="cmt-content checknull" rows="4" maxlength="1000" placeholder="Mời bạn đánh giá về sản phẩm..."></textarea>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="row">
+                        <div class="gender">
+                            <div class="chon">
+                                <input class="male" checked="checked" type="radio" name="gender" /><label>anh</label>
+                                <input class="female" type="radio" name="gender" /><label>chi</label>
+                            </div>
+
+                        </div>
+                        <div class="upimage">
+                            <i class="bhx-p-iconask"></i>
+                            <label>Đính kèm ảnh</label>
+                        </div>
+                    </div>
+                    <div class="cmt-name">
+                        <input class="txt txtFullName checknull" type="text" placeholder="Họ tên (bắt buộc)" maxlength="50" />
+                    </div>
+                    <div class="cmt-phone">
+                        <input class=" txt txtphonenumber checknull" type="text" placeholder="Số điện thoại (bắt buộc)" maxlength="50" />
+                    </div>
+                    <div class="cmt-email">
+                        <input class="txt txtemail checknull" type="text" placeholder="Email" maxlength="50" />
+                    </div>
+                </div>
+                <button class="submit-cmt-info" type="button">GỬI ĐÁNH GIÁ </button>
+
+            </form>
+        </div>
+    </div>
+    <div class="info-right">
+        @Html.Partial("groupcate-ctsp")
+        @Html.Partial("homenews")
+
+    </div>
+</div>

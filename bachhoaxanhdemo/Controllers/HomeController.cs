@@ -40,7 +40,7 @@ namespace bachhoaxanhdemo.Controllers
             return View(listCategories);
         }
 
-        public ActionResult GroupFeatureProduct(int idcate)
+        public ActionResult GroupFeatureProduct(int? idcate)
         {
 
             List<DemoModel> model1 = (from p in _dbBhx2.Products

@@ -52,7 +52,8 @@ namespace bachhoaxanhdemo
                       "~/Content/css/groupfeaturefresh.css",
                       "~/Content/css/groupfeatureproduct.css",
                       "~/Content/css/footer.css",
-                      "~/Content/css/voucher.css"
+                      "~/Content/css/voucher.css",
+                      "~/Content/css/detailproduct.css"
                      ));
         }
     }

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "indexDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section heads
+{
+    @Styles.Render("~/Content/homecss")
+}
+
+<main class="main">
+    <section class="m-left">
+    </section>
+    <section class="m-center">
+        <aside class="container-ctsp">
+            <div class="introduce-ctsp">
+                <div class="back-homepage">
+                    <a href="@Url.Action("index","Home")"> trang chu</a>
+                    <a herf="#">Rau 4kfarm</a>
+                </div>
+                @Html.Partial("product-ctsp")
+            </div>
+
+            <div class="related-products">
+                @Html.Partial("GroupFeatureProduct")
+            </div>
+            @Html.Partial("info-product")
+        </aside>
+    </section>
+    <section class="m-right">
+    </section>
+    <div class="popup-cmt" style="display:none;">
+        <div class="confirm-cmt-ctsp">
+            <div>
+                Vui lòng nhập nội dung.
+            </div>
+            <button class="submit-cmt-ctsp" title="Gửi góp ý cho Bách hóa Xanh" type="submit">ĐỒNG Ý</button>
+
+
+
+        </div>
+    </div>
+</main>
+
