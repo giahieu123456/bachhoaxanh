@@ -1,0 +1,100 @@
+﻿@model bachhoaxanhdemo.Models.Product
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.productName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tradeMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tradeMark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.madeIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.madeIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ingredient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ingredient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.howToUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.howToUse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.preservation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preservation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.decription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.decription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductTitle.productTitleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductTitle.productTitleName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idProduct }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

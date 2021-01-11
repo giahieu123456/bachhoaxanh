@@ -1,124 +1,121 @@
-﻿
-    <header class="sticky">
-        <div class="tophead">
-            <a href="@Url.Action("Index", "Home")" class="header__logo" aria-hidden="true">
-                <i class="bhx-logo"></i>
-            </a>
-            <div class="header__popup-overlays" style="display:none"></div>
-            <div class="header__locationContainer">
-                <div class="locationUser">
-                    <div class="location_left">
-                        <i class="bhx-toggle"></i>
-                        <div class="current_locate">
-                            <span class="shipto">Giao tại : </span>
-                            <span class="shiptohere">Thành phố Hồ Chí Minh</span>
-                            <span class="change">Thay đổi</span>
-                        </div>
-                        <div class="clr"></div>
+﻿<header class="sticky">
+    <div class="tophead">
+        <a href="@Url.Action("Index", "Home")" class="header__logo" aria-hidden="true">
+            <i class="bhx-logo"></i>
+        </a>
+        <div class="header__popup-overlays" style="display:none"></div>
+        <div class="header__locationContainer">
+            <div class="locationUser">
+                <div class="location_left">
+                    <i class="bhx-toggle"></i>
+                    <div class="current_locate">
+                        <span class="shipto">Giao tại : </span>
+                        <span class="shiptohere">Thành phố Hồ Chí Minh</span>
+                        <span class="change">Thay đổi</span>
                     </div>
-
+                    <div class="clr"></div>
                 </div>
-            </div>
-            <div class="header__cart">
-                <form class="mainsearch">
-                    <div class="easy-autocomplete" style="width:385px">
-                        <input type="text" autocomplete="off" placeholder="Anh tìm gì..." id="text-search" maxlength="80" aria-label="text-search" />
-                    </div>
-                    <div class="reset" style="display:none"><i class="bhx-closemenu"></i></div>
-                    <button type="submit" aria-label="Search">
-                        <i class="bhx-search" style="display: inline-block;"></i>
-                        <div class="btn-search" style="display:none"><span>TÌM</span></div>
-                    </button>
 
-                </form>
-                <a href="/lich-su-mua-hang" class="histories">
-                    Đơn hàng
-                    <br />
-                    anh Tuấn
-                </a>
-                <a href="/gio-hang" class="temcart no">
-                    <div>
-                        <i class="bhx-cart" style="display:inline-block"></i>
-                        <span class="hidden">0</span>
-                    </div>
-                    <div>
-                        <b class="card">GIỎ HÀNG</b>
-                        <b class="sumorder hidden">0 VND</b>
-                    </div>
-                </a>
             </div>
         </div>
+        <div class="header__cart">
+            <form class="mainsearch">
+                <div class="easy-autocomplete" style="width:385px">
+                    <input type="text" autocomplete="off" placeholder="Anh tìm gì..." id="text-search" maxlength="80" aria-label="text-search" />
+                </div>
+                <div class="reset" style="display:none"><i class="bhx-closemenu"></i></div>
+                <button type="submit" aria-label="Search">
+                    <i class="bhx-search" style="display: inline-block;"></i>
+                    <div class="btn-search" style="display:none"><span>TÌM</span></div>
+                </button>
 
-        @* Html DANH MUC SAN PHAM *@
-        <aside class="colmenu sb-container sb-container-noscroll">
-            <div class="sb-scrollbar-container">
-                <div class="sb-scrollbar" style="height:auto; top:auto"></div>
-            </div>
-            <div class="sb-content" style="max-height:952px">
-                <nav class="menu-hover">
-                    <span>
-                        <i class="bhx-navmenu"></i>
-                        DANH MỤC SẢN PHẨM
-                    </span>
-                    <ul class="colmenu-ul">
-                        <li class="fourkfarm"><a href="/rau-an-toan-4kfarm">RAU AN TOÀN 4kFarm</a></li>
+            </form>
+            <a href="/lich-su-mua-hang" class="histories">
+                Đơn hàng
+                <br />
+                anh Tuấn
+            </a>
+            <a href="/gio-hang" class="temcart no">
+                <div>
+                    <i class="bhx-cart" style="display:inline-block"></i>
+                    <span class="hidden">0</span>
+                </div>
+                <div>
+                    <b class="card">GIỎ HÀNG</b>
+                    <b class="sumorder hidden">0 VND</b>
+                </div>
+            </a>
+        </div>
+    </div>
 
-                        @foreach (var item in ViewBag.listCategories)
+    @* Html DANH MUC SAN PHAM *@
+    <aside class="colmenu sb-container sb-container-noscroll">
+        <div class="sb-scrollbar-container">
+            <div class="sb-scrollbar" style="height:auto; top:auto"></div>
+        </div>
+        <div class="sb-content" style="max-height:952px">
+            <nav class="menu-hover">
+                <span>
+                    <i class="bhx-navmenu"></i>
+                    DANH MỤC SẢN PHẨM
+                </span>
+                <ul class="colmenu-ul">
+                    <li class="fourkfarm"><a href="/rau-an-toan-4kfarm">RAU AN TOÀN 4kFarm</a></li>
+
+                    @foreach (var item in @ViewBag.listCategories)
+                    {
+                        if (@item.idCategory != 1)
                         {
-                            if (@item.idCategory != 1)
-                            {
-                                <li>
-                                    <div class="nav-parent">@item.categoryName</div>
-                                    <div class="nav-item">
+                            <li>
+                                <div class="nav-parent">@item.categoryName</div>
+                                <div class="nav-item">
 
-                                        @foreach (var title in ViewBag.listTitle)
+                                    @foreach (var title in @ViewBag.listTitle)
+                                    {
+                                        if (title.idCategory == item.idCategory)
                                         {
-                                            if (title.idCategory == item.idCategory)
-                                            {
-                                                <div class="parent">
-                                                    <a href="@Url.Action("Index", "ProductTitles",new{ id = title.idProductTitle })" class="link-hover menu-haschild">@title.productTitleName</a>
-                                                </div>
-                                            }
+                                            <div class="parent">
+                                                <a href="@Url.Action("Index","ProductTitle",new { id=title.idProductTitle })" class="link-hover menu-haschild">@title.productTitleName</a>
+                                            </div>
                                         }
+                                    }
 
-
-
-                                    </div>
-                                </li>
-                            }
+                                </div>
+                            </li>
                         }
+                    }
 
 
 
-                        <li class="nav-search">
-                            <input type="search" class="search-menu" id="searchMenu" autocomplete="off" spellcheck="false" aria-label="Tìm món hàng" placeholder="Nhập món hàng cần tìm" />
-                            <button class="show" type="button" aria-label="Search">
-                                <i class="bhx-search"></i>
-                            </button>
-                        </li>
-                        <li class="productpromo-count">
-                            <a href="/khuyen-mai">
-                                <i class="bhx-productpromo"></i>
-                                <strong class="number">2.151</strong>
-                                sản phẩm khuyến mãi
-                            </a>
-                        </li>
-                        <li class="product-expired">
-                            <a href="/khuyen-mai/xa-kho-gia-soc">
-                                <i class="bhx-productexpired"></i>
-                                Xả kho giá sốc
-                            </a>
-                        </li>
-                        <li class="store-count">
-                            <a href="/he-thong-sieu-thi">
-                                <i class="bhx-storecount"></i>
-                                Danh sách
-                                <strong class="number">1.688</strong>
-                                cửa hàng
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-    </header>
+                    <li class="nav-search">
+                        <input type="search" class="search-menu" id="searchMenu" autocomplete="off" spellcheck="false" aria-label="Tìm món hàng" placeholder="Nhập món hàng cần tìm" />
+                        <button class="show" type="button" aria-label="Search">
+                            <i class="bhx-search"></i>
+                        </button>
+                    </li>
+                    <li class="productpromo-count">
+                        <a href="/khuyen-mai">
+                            <i class="bhx-productpromo"></i>
+                            <strong class="number">2.151</strong>
+                            sản phẩm khuyến mãi
+                        </a>
+                    </li>
+                    <li class="product-expired">
+                        <a href="/khuyen-mai/xa-kho-gia-soc">
+                            <i class="bhx-productexpired"></i>
+                            Xả kho giá sốc
+                        </a>
+                    </li>
+                    <li class="store-count">
+                        <a href="/he-thong-sieu-thi">
+                            <i class="bhx-storecount"></i>
+                            Danh sách
+                            <strong class="number">1.688</strong>
+                            cửa hàng
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+</header>

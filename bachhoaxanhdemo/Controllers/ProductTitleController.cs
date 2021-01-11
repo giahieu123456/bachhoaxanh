@@ -18,10 +18,6 @@ namespace bachhoaxanhdemo.Controllers
             {
                 return HttpNotFound();
             }
-
-            
-            
-
             var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).ToList();
             var listTitle = _dbBhx.ProductTitles.OrderBy(x => x.idProductTitle).ToList();
             ViewBag.listCategories = listCategories;
