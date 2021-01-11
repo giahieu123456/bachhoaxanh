@@ -1,5 +1,4 @@
-﻿
-<header class="sticky">
+﻿<header class="sticky">
     <div class="tophead">
         <a href="@Url.Action("Index", "Home")" class="header__logo" aria-hidden="true">
             <i class="bhx-logo"></i>
@@ -76,12 +75,10 @@
                                         if (title.idCategory == item.idCategory)
                                         {
                                             <div class="parent">
-                                                <a href="@Url.Action("Index","ProductTitle",new {id=title.idProductTitle })" class="link-hover menu-haschild">@title.productTitleName</a>
+                                                <a href="@Url.Action("Index","ProductTitle",new { id=title.idProductTitle })" class="link-hover menu-haschild">@title.productTitleName</a>
                                             </div>
                                         }
                                     }
-
-
 
                                 </div>
                             </li>

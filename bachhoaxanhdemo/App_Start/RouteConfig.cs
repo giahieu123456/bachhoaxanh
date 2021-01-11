@@ -14,6 +14,12 @@ namespace bachhoaxanhdemo
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "ProductDetails",
+                "title-{id}/product-{idProd}",
+                new { controller = "Product", action = "Index", id = UrlParameter.Optional, idProd = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 "ProductTitle",
                 "title-{id}",
                 new { controller = "ProductTitle", action = "Index", id = UrlParameter.Optional }

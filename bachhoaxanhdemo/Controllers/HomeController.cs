@@ -40,10 +40,6 @@ namespace bachhoaxanhdemo.Controllers
             //                     join c in _dbBhx.Categories on pt.idCategory equals c.idCategory
 
             //                     select new DemoModel { LIST_PRODUCT = p, ID_CATE = c.idCategory }).ToList();
-
-
-
-
             //ViewBag.listProductByCate = productByCate;
             var listCategories = _dbBhx.Categories.OrderBy(x => x.idCategory).ToList();
             
@@ -51,9 +47,6 @@ namespace bachhoaxanhdemo.Controllers
         }
 
         //public List<Product> product = _dbBhx.Products.ToList();
-
-       
-      
 
         public ActionResult GroupFeatureProduct(int idcate)
         {
@@ -115,7 +108,6 @@ namespace bachhoaxanhdemo.Controllers
 
             return Json(model1, JsonRequestBehavior.AllowGet);
         }
-
 
 
     }
