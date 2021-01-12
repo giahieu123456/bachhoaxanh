@@ -218,6 +218,7 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\Home\ctsp.js" />
     <Content Include="Scripts\Home\dropdownHeader.js" />
     <Content Include="Scripts\Home\LoadMore.js" />
     <Content Include="Scripts\Home\owl.carousel.min.js" />
@@ -264,7 +265,6 @@
     <Content Include="Views\Shared\Section.cshtml" />
     <Content Include="Views\Shared\GroupCategory.cshtml" />
     <Content Include="Views\Shared\GroupFeatureFresh.cshtml" />
-    <Content Include="Views\Shared\GroupFeatureProduct.cshtml" />
     <Content Include="Views\Home\GroupFeature.cshtml" />
     <Content Include="Views\Home\LoadMoreProduct.cshtml" />
     <Content Include="Views\Home\GroupFeatureProduct.cshtml" />
@@ -277,9 +277,9 @@
     <Content Include="Views\Shared\groupcate-ctsp.cshtml" />
     <Content Include="Views\Shared\group.cshtml" />
     <Content Include="Views\Shared\homenews.cshtml" />
-    <Content Include="Views\Shared\info-detail.cshtml" />
     <Content Include="Views\Shared\info-product.cshtml" />
     <Content Include="Views\Shared\product-ctsp.cshtml" />
+    <Content Include="Views\DetailProduct\infodetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

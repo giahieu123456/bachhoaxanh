@@ -7,7 +7,7 @@
 {
     @Styles.Render("~/Content/homecss")
 }
-
+@Html.Partial("Header")
 <main class="main">
     <section class="m-left">
     </section>
@@ -18,27 +18,27 @@
                     <a href="@Url.Action("index","Home")"> trang chu</a>
                     <a herf="#">Rau 4kfarm</a>
                 </div>
-                @Html.Partial("product-ctsp")
+                @Html.Partial("product-" +
+               "ctsp")
             </div>
 
             <div class="related-products">
-                @Html.Partial("GroupFeatureProduct")
+
             </div>
             @Html.Partial("info-product")
         </aside>
     </section>
     <section class="m-right">
     </section>
-    <div class="popup-cmt" style="display:none;">
+    <div class="popup-cmt-ctsp" style="display:none;">
         <div class="confirm-cmt-ctsp">
             <div>
                 Vui lòng nhập nội dung.
             </div>
             <button class="submit-cmt-ctsp" title="Gửi góp ý cho Bách hóa Xanh" type="submit">ĐỒNG Ý</button>
-
-
-
         </div>
     </div>
 </main>
-
+@Html.Partial("footer")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/owl.carousel")

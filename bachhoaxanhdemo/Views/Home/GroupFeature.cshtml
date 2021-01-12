@@ -10,27 +10,29 @@
     if (cate.idCategory != 1)
     {
 
-        <div class="groupfeature">
-            <h2 class="hometitle">
-                @cate.categoryName
-            </h2>
-            <ul class="cate cateproduct" data-id=@cate.idCategory id="catenow">
-                @Html.Action("GroupFeatureProduct", "Home", new { idcate = cate.idCategory })            
-            </ul>
+<div class="groupfeature">
+    <h2 class="hometitle">
+        @cate.categoryName
+    </h2>
+    <ul class="cate cateproduct" data-id=@cate.idCategory id="catenow">
+        @Html.Action("GroupFeatureProduct", "Home", new { idcate = cate.idCategory })
+    </ul>
+  
+          <div class="viewmore noafter" id="loadMore">
+                    Xem thêm <span>@ViewBag.countproduct </span> sản phẩm khuyến mãi
+                    <span>
+                        <img id="loading" style="display: none;" src="~/Content/image/Spinner-1s-200px.gif" />
 
+                    </span>
 
-            <div class="viewmore noafter" id="loadMore">
-                Xem thêm <span>2</span> sản phẩm khuyến mãi
-                <span>
-                    <img id="loading" style="display: none;" src="~/Content/image/Spinner-1s-200px.gif" />
-                </span>
-            </div>
-            <div class="cate-prom">
-                <a class="hidden" href="sua-tuoi">Sữa tươi</a>
-                <a class="hidden" href="sua-chua">Sữa chua</a>
-                <a class="hidden" href="sua-ca-cao">Sữa ca cao</a>
-            </div>
-        </div>
+                </div>
+  
+    <div class="cate-prom">
+        <a class="hidden" href="sua-tuoi">Sữa tươi</a>
+        <a class="hidden" href="sua-chua">Sữa chua</a>
+        <a class="hidden" href="sua-ca-cao">Sữa ca cao</a>
+    </div>
+</div>
     }
 
 }

@@ -13,24 +13,25 @@ namespace bachhoaxanhdemo
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            
+
+            routes.MapRoute(
+               name: "Product",
+               url: "title-{id}/product-{idProd}",
+                new { controller = "DetailProduct", action = "indexDetail", id = UrlParameter.Optional, idProd = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
                name: "ProductTitles",
                url: "title-{id}",
                 new { controller = "ProductTitles", action = "Index", id = UrlParameter.Optional }
             );
-            routes.MapRoute(
-           name: "Detailproduct",
-            url: "detail-{id}",
-            new { controller = "DetailProduct", action = "indexDetail", id = UrlParameter.Optional }
-        );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-         
+
 
         }
     }

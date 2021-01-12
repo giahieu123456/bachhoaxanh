@@ -14,7 +14,8 @@ namespace bachhoaxanhdemo
                         "~/Scripts/Home/popupfeedback.js",
                         "~/Scripts/Home/scrollbacktop.js",
                         "~/Scripts/Home/voucher.js",
-                        "~/Scripts/Home/upanddownproduct.js"
+                        "~/Scripts/Home/upanddownproduct.js", 
+                        "~/Scripts/Home/ctsp.js"
 
                         ));
 

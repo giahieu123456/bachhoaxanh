@@ -1,0 +1,37 @@
+﻿@model bachhoaxanhdemo.Models.Product
+@if (Model != null)
+{
+    <div class="info-details">
+        <strong class="textinfpro">Thông tin sản phẩm</strong>
+
+        <ul class="infoproduct nospeci">
+            <li>
+                <span>Thương hiệu</span>
+                <div> @Model.tradeMark</div>
+            </li>
+            <li>
+                <span>Nơi sản xuất</span>
+                <div>@Model.madeIn</div>
+            </li>
+            <li>
+                <span>Thành Phần</span>
+                <div>@Model.ingredient</div>
+            </li>
+            <li>
+                <span>weight</span>
+                <div>@Model.weight</div>
+            </li>
+            <li>
+                <span>Hướng dẫn sử dụng</span>
+                <div>@Model.howToUse</div>
+            </li>
+            <li>
+                <span>Lưu ý</span>
+                <div>@Model.preservation</div>
+            </li>
+        </ul>
+
+
+    </div>
+}
+

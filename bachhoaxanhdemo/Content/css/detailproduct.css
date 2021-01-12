@@ -83,7 +83,6 @@
 /*select-ctsp*/
 .introduce-ctsp .product-ctsp .select-ctsp {
     width: 438px;
-    height: 600px;
     display: flex;
     flex-direction: column;
 }
@@ -524,8 +523,7 @@
 
 .comment .formrating > button {
     outline: none;
-    margin-top: 10px;
-    margin-right: 0;
+    margin:10px 0px;
     height: 48px;
     line-height: 48px;
     color: #fff;
@@ -534,9 +532,9 @@
     border: none;
     cursor: pointer;
     background: #008945;
-    float: right;
+   
     box-shadow: 0 2px 2px rgba(0,0,0,.25);
-    width: 100%;
+    width: 97%;
 }
 
 .container-ctsp .info-product .info-right {
@@ -634,7 +632,7 @@
     overflow: hidden;
     font-size: 14px;
     background: #fff;
-    padding: 15px 10px 10px;
+    padding: 10px 5px 5px;
     color: #4a4a4a;
 }
 
@@ -642,7 +640,7 @@
     text-align: center;
     float: right;
     margin-right: 10px;
-    padding-top: 15px;
+    padding: 15px 5px 5px;
     text-decoration: none;
 }
 
@@ -658,8 +656,20 @@
 .blurred {
     opacity: 0.2;
 }
+.popup-cmt-ctsp {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding-top: 100px;
+    padding-left: 555px;
+}
 
-.popup-cmt .confirm-cmt-ctsp {
+.popup-cmt-ctsp .confirm-cmt-ctsp {
     min-height: 110px;
     max-width: 417px;
     padding: 10px 6px 0 6px;
@@ -670,7 +680,7 @@
     background-color: #fff;
 }
 
-.popup-cmt .submit-cmt-ctsp {
+.popup-cmt-ctsp .submit-cmt-ctsp {
     position: relative;
     left: 154px;
     top: 42px;

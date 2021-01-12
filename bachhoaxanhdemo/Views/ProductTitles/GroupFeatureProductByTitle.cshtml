@@ -12,7 +12,7 @@
         @foreach (var item in Model.LIST_PRODUCT)
         {
         <li class="product">
-            <a href="@Url.Action("indexDetail", "DetailProduct", new { id = item.idProduct })" title="Cải thìa túi 500g">
+            <a href="@Url.Action("indexDetail", "DetailProduct", new { id = item.idProductTitle, idProd = item.idProduct })" title="Cải thìa túi 500g">
                 <div class="boximg center" title="Cải thìa túi 500g">
                     <img width="160" height="160" alt="bg-Lốc 4 hộp sữa tiệt trùng Dutch Lady 170ml" src=@(item.image != null ? item.image.Split(' ')[0] : "https://cdn.tgdd.vn/Products/Images/2943/229508/bhx/thung-16-hop-sua-dau-nanh-dau-den-oc-cho-hanh-nhan-yaho-190ml-202011060932118206_300x300.jpg") />
                 </div>

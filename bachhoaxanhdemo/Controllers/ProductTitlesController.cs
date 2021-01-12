@@ -26,7 +26,6 @@ namespace bachhoaxanhdemo.Controllers
         }
         public ActionResult GroupFeatureProductByTitle(int? id)
         {
-
             if (id == null)
             {
                 return HttpNotFound();
@@ -38,7 +37,6 @@ namespace bachhoaxanhdemo.Controllers
                                                 where p.idProductTitle == id
                                                 select p).ToList();
             var productTitleName = _dbBhx2.ProductTitles.FirstOrDefault(x => x.idProductTitle == id).productTitleName;
-
             var ProductByTitle = new ProdByTitle();
             ProductByTitle.LIST_PRODUCT = listProductByTitle;
             ProductByTitle.ProductTitleName = productTitleName;         

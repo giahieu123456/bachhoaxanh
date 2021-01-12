@@ -34,21 +34,24 @@ namespace bachhoaxanhdemo.Controllers
         }
 */
         public ActionResult GroupFeature()
-        {
+        { 
             var listCategories = _dbBhx2.Categories.OrderBy(x => x.idCategory).ToList();
-   
-            return View(listCategories);
+            var listproduct = _dbBhx2.Products.OrderBy(m => m.idProduct).ToList();
+            var listproducttitle = _dbBhx2.ProductTitles.OrderBy(n=> n.idProductTitle).ToList();
+     
+                    return View(listCategories);
         }
 
         public ActionResult GroupFeatureProduct(int? idcate)
         {
-
+           
             List<DemoModel> model1 = (from p in _dbBhx2.Products
                                       join pt in _dbBhx2.ProductTitles on p.idProductTitle equals pt.idProductTitle
                                       join c in _dbBhx2.Categories on pt.idCategory equals c.idCategory
                                       where c.idCategory == idcate
-                                      select new DemoModel { idProduct = p.idProduct, productName = p.productName, productPrice = p.productPrice, image = p.image, idCategory = c.idCategory }).OrderBy(x => x.idCategory).Take(4).ToList();
-
+                                      select new DemoModel { idProduct = p.idProduct, productName = p.productName, productPrice = p.productPrice, image = p.image, idCategory = c.idCategory, idProductTitle =p.idProductTitle }).OrderBy(x => x.idCategory).Take(4).ToList();
+            var countproduct = model1.Count;
+           
             return View(model1);
         }
 
@@ -71,22 +74,21 @@ namespace bachhoaxanhdemo.Controllers
         [AllowAnonymous]
         public JsonResult LoadMoreProduct(int idcate, int page_index)
         {
-
+           
             var model1 = (from p in _dbBhx2.Products
                           join pt in _dbBhx2.ProductTitles on p.idProductTitle equals pt.idProductTitle
                           join c in _dbBhx2.Categories on pt.idCategory equals c.idCategory
                           where c.idCategory == idcate
-                          select new DemoModel { idProduct = p.idProduct, productName = p.productName, productPrice = p.productPrice, image = p.image, idCategory = c.idCategory }).OrderBy(x => x.idCategory).Skip(page_index).Take(4).ToList();
-
-
-            int modelCount = model1.Count();
+                          select new DemoModel { idProduct = p.idProduct, productName = p.productName, productPrice = p.productPrice, image = p.image, idCategory = c.idCategory }).OrderBy(x => x.idCategory).Skip(page_index).ToList();
+            int modelCount = model1.Skip(4).Count();                  
+            var model2 = model1.Take(4).ToList();
             if (model1.Any())
             {
-                string modelString = RenderRazorViewToString("LoadMoreProduct", model1);
+                string modelString = RenderRazorViewToString("LoadMoreProduct", model2);
                 return Json(new { ModelString = modelString, ModelCount = modelCount }, JsonRequestBehavior.AllowGet);
             }
 
-            return Json(model1, JsonRequestBehavior.AllowGet);
+            return Json(null);
         }
 
 

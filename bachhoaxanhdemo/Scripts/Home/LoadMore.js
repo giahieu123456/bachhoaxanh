@@ -5,10 +5,10 @@
     $(document).ready(function () {
 
 
-        $('.viewmore').click(function (e) {
-            
+        $('.viewmore').click(function (e) {           
             var page_index = 0;
-            $(e.target).prev().children().map(function (item) {
+            
+            $(e.target).prev().find("li").map(function (item) {
                 return page_index = page_index + 1;
             })
             var idcate = $(e.target).prev().attr('data-id')
@@ -16,19 +16,20 @@
             var url = "/Home/LoadMoreProduct/";
             $.ajax({
                 url: url,
-                data: { idcate: idcate, page_index: page_index },
+                data: { idcate: idcate, page_index: page_index,  },
                 
 
                 success: function (data) {
-                    
-                    if (data.length !== 0) {
-                        //$(data.ModelString).insertBefore(".cateproduct").find().hide().fadeIn(2000);
+
+                    $(e.target).children().first().text(data.ModelCount)
+
+                    if (data.length !== 0) {                      
                         var a = $(e.target).prev().html();
                         $(e.target).prev().html(a + data.ModelString);
                     }
 
                     var ajaxModelCount = data.ModelCount;
-                    if (ajaxModelCount<4) {
+                    if (ajaxModelCount<=0) {
                         $(e.target).hide().fadeOut(2000);
                     }
 

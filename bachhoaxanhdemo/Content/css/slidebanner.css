@@ -11,6 +11,10 @@ img {
     max-height: 200px;
     overflow: hidden;
 }
+    .slide-home:hover .owl-prev, :hover .owl-next {
+        width: 30px;
+        height: 30px;
+    }
 
     .slide-home a:first-child {
         display: block;
@@ -53,6 +57,8 @@ img {
     display: block;
     width: 100%;
 }
+   
+
 
 /*Style Owl Nav*/
 .owl-theme .owl-nav {
@@ -94,10 +100,7 @@ img {
     margin: 0;
     outline: none ;
 }
-    .owl-theme .owl-nav .owl-prev:hover, .owl-theme .owl-nav .owl-next:hover {
-        width: 30px;
-        height: 30px;
-    }
+    
 
 .owl-theme .owl-nav .owl-prev {
     float: left;
@@ -170,7 +173,6 @@ img {
 .owl-theme .owl-nav .owl-prev:hover:before, .owl-theme .owl-nav .owl-next:hover:before {
     width: 10px;
     height: 10px;
-    
 }
 
 /*Style Owl-Dots*/
