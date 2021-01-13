@@ -16,15 +16,15 @@
         dots: true,
     });
 
-    owlCarouselBanner.mouseenter(function () {
+    $(".slide-home").mouseenter(function () {
      
-        prevBtn.addClass('hint');
-        nextBtn.addClass('hint');
+        $(".owl-prev").addClass('hint');
+        $(".owl-next").addClass('hint');
     })
 
-    owlCarouselBanner.mouseleave(function () {
-        prevBtn.removeClass('hint');
-        nextBtn.removeClass('hint');
+    $(".slide-home").mouseleave(function () {
+        $(".owl-prev").removeClass('hint');
+        $(".owl-next").removeClass('hint');
     })
 
 });

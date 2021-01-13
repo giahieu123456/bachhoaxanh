@@ -32,7 +32,6 @@
                     if (ajaxModelCount<=0) {
                         $(e.target).hide().fadeOut(2000);
                     }
-
                 },
                 error: function (xhr, status, error) {
                     console.log(xhr.responseText);

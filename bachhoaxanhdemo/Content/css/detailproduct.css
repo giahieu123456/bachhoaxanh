@@ -73,11 +73,13 @@
 
 .product-ctsp .boxcarousel .list-carousel {
     display: flex;
+    width:525px;
+    position:relative
 }
 
 .boxcarousel .list-carousel .thumbpro {
-    height: 60px;
-    width: 80px;
+    height: 400px;
+    width: 100%;
     margin: 5px;
 }
 /*select-ctsp*/
@@ -696,3 +698,33 @@
     min-height: 35px;
     outline: 0;
 }
+
+.boxcarousel .list-carousel .owl-nav .owl-prev {
+    background-color: #99999957;
+    height: 53px;
+    width: 20px;
+    position: absolute;
+    right: 505px;
+    top: 163px;
+    outline:none;
+}
+.boxcarousel .list-carousel .owl-nav .owl-next {
+    background-color: #99999957;
+    height: 53px;
+    width: 20px;
+    position: absolute;
+    right: 0px;
+    top: 163px;
+    outline:none;
+}
+.boxcarousel .chosse-crs{
+    display:flex;
+
+}
+    .boxcarousel .chosse-crs .img-crs {
+        margin: 5px;
+        width: 95px;
+        border: solid 0.8px #d6d6d6;
+        border-radius: 5px;
+    }
+

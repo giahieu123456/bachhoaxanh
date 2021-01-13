@@ -18,8 +18,28 @@ $(".radio-vlaue").click(function () {
 	$(".main-voucher-step2").show();
 	$(".main-voucher-step3").show();
 	y = parseInt($('input[name="radio-total"]:checked').val());
+	
 	x = parseInt($(".qty-input").val());
-	$(".pay-total").text(x * y);
+	z = $(".pay-total").text(x * y);
+	if (z >= 37 && z <= 40) return;
+	$(".pay-total").text(function (index, value) {
+		return value
+			.replace(/\D/g, "")
+			.replace(/\B(?=(\d{3})+(?!\d))/g,".")
+	});
+})
+
+
+$('.qty-input').keyup(function (event) {
+	y = parseInt($('input[name="radio-total"]:checked').val());
+	x = parseInt($(".qty-input").val());
+	z = $(".pay-total").text(x * y);
+	if (z >= 37 && z <= 40) return;
+	$(".pay-total").text(function (index, value) {
+		return value
+			.replace(/\D/g, "")
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+	});
 })
 $(".down").click(function () {
 	var x = $(".qty-input").val();
@@ -33,7 +53,13 @@ $(".down").click(function () {
 	}
 	y = parseInt($('input[name="radio-total"]:checked').val());
 	x = parseInt($(".qty-input").val());
-	$(".pay-total").text(x * y);
+	z = $(".pay-total").text(x * y);
+	if (z >= 37 && z <= 40) return;
+	$(".pay-total").text(function (index, value) {
+		return value
+			.replace(/\D/g, "")
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+	});
 })
 
 $(".up").click(function () {
@@ -49,6 +75,12 @@ $(".up").click(function () {
 	}
 	y = parseInt($('input[name="radio-total"]:checked').val());
 	x = parseInt($(".qty-input").val());
-	$(".pay-total").text(x * y);
+	z = $(".pay-total").text(x * y);
+	if (z >= 37 && z <= 40) return;
+	$(".pay-total").text(function (index, value) {
+		return value
+			.replace(/\D/g, "")
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+	});
 
 })

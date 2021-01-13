@@ -77,6 +77,8 @@ img {
 
     .owl-theme .owl-nav .hint.owl-prev {
         margin-left: 10px;
+        width: 20px;
+        height: 20px;
     }
 
 
@@ -116,8 +118,8 @@ img {
 }
 
 .owl-theme .owl-nav .hint.owl-prev:before, .owl-theme .owl-nav .hint.owl-next:before {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
 }
 
 .owl-theme .owl-nav .owl-prev:before {
@@ -152,8 +154,8 @@ img {
 }
 
 .owl-theme .owl-nav .hint.owl-prev:before, .owl-theme .owl-nav .hint.owl-next:before {
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
 }
 
 .owl-theme .owl-nav .owl-next:before {

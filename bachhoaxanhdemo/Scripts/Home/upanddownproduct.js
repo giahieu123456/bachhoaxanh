@@ -27,6 +27,7 @@
 
 		} else {
 			x.val(total + 1);
+			$(".noselect-minus").removeClass("blurred")
 		}
 
 	});

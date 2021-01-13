@@ -228,8 +228,6 @@ C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\System.Web.WebPa
 C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\System.Web.WebPages.dll
 C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\System.Web.WebPages.Razor.dll
 C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\WebGrease.dll
-C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\EntityFramework.xml
-C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\EntityFramework.SqlServer.xml
 C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\System.Web.Helpers.xml
 C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\System.Web.Mvc.xml
 C:\Users\X1 Carbon\Source\Repos\bachhoaxanh\bachhoaxanhdemo\bin\System.Web.Optimization.xml
