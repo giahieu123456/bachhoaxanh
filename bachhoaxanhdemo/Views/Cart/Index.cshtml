@@ -10,7 +10,7 @@
 }
 @Html.Partial("Header")
 <div class="main-cart">
-    <div class="content-cart">
+    <div class="content-cart cart">
         <div class="block-1">
             <div class="p-gender">
                 Giỏ hàng của anh Tuan
@@ -18,8 +18,7 @@
         </div>
         <div class="block">
             <div class="item-cart">
-               
-                <img alt="Kem đặc có đường DeliPure lon 380g" src="https://cdn.tgdd.vn/Products/Images/2526/86753/bhx/kem-dac-co-duong-delipure-lon-380g-202002141032533774_300x300.jpg" width="60" height="60">
+                <img alt="Kem đặc có đường DeliPure lon 380g" src="https://cdn.tgdd.vn/Products/Images/2526/86753/bhx/kem-dac-co-duong-delipure-lon-380g-202002141032533774_300x300.jpg" width="60">
                 <div class="info-item-cart">
                     <div class="head-title">
                         <a href="/sua-dac/sua-dac-co-duong-delipure-380g" class="name">Kem đặc có đường DeliPure lon 380g</a>
@@ -36,9 +35,99 @@
                     <span class="unit">15.000₫ / lon</span>
                 </div>
             </div>
-           
+            <div class="discountship">
+                <div class="muathem">
+                    <a href="/"> Mua thêm</a> <span class="fulltext">
+                        <b>85.000₫</b> để được
+                        <b> miễn phí giao 5 đơn hàng đầu tiên </b>
+                        (Không áp dụng khi mua  hàng nặng, to:<b>Nước giải khát, Nước suối, Bia, Nước uống có cồn</b>)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="summary">
+            <div class="row1">
+                <div class="col55">
+                    <div class="cost"><span>Tiền hàng: </span> <label id="carttotal"><b>15.000₫</b></label></div>
+                    <div class="shipfee">
+                        <span>
+                            <a class="inline-shipfree"><i class="bhx-qstshipfree"></i></a> Phí giao dự kiến
+                            : 15.0000
+                        </span>
+
+                    </div>
+                    <div class="text-shipfree">
+                        <span class="text-green">
+                            <a style="color:forestgreen;" target="_blank" href="/chinh-sach-giao-hang" title="Chính sách giao hàng">
+                                (Phí sẽ được cập nhật sau khi nhập số điện thoại)
+                            </a>
+                        </span>
+                    </div>
+                    <a href="javascript:;" class="couponlink">
+                        <i class="icon-use-voucher"></i> Dùng phiếu mua hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="btn-order">
+            <button class="btn-og btn-step">ĐẶT HÀNG</button>
+            <div class="clearall">
+                <button>XÓA GIỎ HÀNG</button>
+            </div>
         </div>
     </div>
+    <div class="order-cart cart">
+        <a class="backstep">Xem lại giỏ hàng</a>
+        <div class="block">
+            <form class="form-order">
+                <divc class="profile-block">
+                    <div class="blockGetAddress">
+                        <a class="btnGetAddress">» LẤY ĐỊA CHỈ MUA HÀNG TRƯỚC</a>
+                        <div class="line"></div>
+                    </div>
+                    <div class="box-curaddress hasstep">
+                        <h3 class="hpro">1. Thông tin người mua hàng:</h3>
+                    </div>
+                    <div class="wrapcheckbox">
+                        <span class="gender">
+                            <input type="radio" name="ProfileItems_0_Gender" id="ProfileItems_0_Gender1" value="1">
+                            <label for="ProfileItems_0_Gender1"> Anh &nbsp; </label>
+                        </span>
+                        <span class="gender">
+                            <input type="radio" name="ProfileItems_0_Gender" id="ProfileItems_0_Gender0" value="0">
+                            <label for="ProfileItems_0_Gender0"> Chị</label>
+                        </span>
+                    </div>
+                    <div class="txtname">
+                        <label class="name-order txtorder" >Họ và tên</label>
+                        <input class="ip-name ip" type="text" maxlength="100" />
+                    </div>
+                    <div class="txtphone-order">
+                        <label class="phone-order txtorder" >Số điện thoại</label>
+                        <input class="ip-phone ip" type="number" maxlength="100"  />
+                    </div>
+                    <div class="wrapcheckbox">               
+                            <div class="check-call-order">
+                                <input class="IsCallOthers" type="checkbox" />
+                                <label for="IsCallOthers" >Gọi người khác nhận hàng (nếu có)</label>                
+                            </div>
+                            <div class="wrapcheckbox chosse-gender">
+                                <span class="gender">
+                                    <input type="radio" name="ProfileItems"  value="1">
+                                    <label for="ProfileItems"> Anh &nbsp; </label>
+                                </span>
+                                <span class="gender">
+                                    <input type="radio" name="ProfileItems"  value="0">
+                                    <label for="ProfileItems"> Chị</label>
+                                </span>
+                            </div>
+                    </div>
+                </divc>
+            </form>
+          
+        </div>
+    </div>
+   
 </div>
 <div class="popup-soldout" style="display:none;">
     <div class="ajs-dialog" tabindex="0">
@@ -50,5 +139,8 @@
         </div>
     </div>
 </div>
+
+
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/owl.carousel")
+<script src="~/Scripts/Home/Cart.js"></script>

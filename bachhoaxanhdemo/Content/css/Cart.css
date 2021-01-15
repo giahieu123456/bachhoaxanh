@@ -1,16 +1,20 @@
-﻿.main-cart {
-   position:fixed;
-   top:50px;
+﻿.header-cart {
+    max-height: 38px !important;
+    background-color: #037841 !important;
+    color:white !important;
+}
+.main-cart {
+   margin-top:80px;
     width: 100%;
-    height: 1000px;
-    z-index: 12;
+    height: 100%;
+    z-index: 12 ;
     background-color: #e9edf0
     
 }
 .sb-content:hover{
     z-index:13;
 }
-.main-cart .content-cart {
+.main-cart .cart {
     display: flex;
     flex-direction: column;
     margin: 20px 473px 0px;
@@ -40,12 +44,14 @@
             box-sizing: border-box;
             display:flex;
         }
+            .content-cart .block .item-cart >img{
+                height:60px;
+            }
             .block .item-cart .info-item-cart {
-                display:flex;   
-                flex-direction:column;
-                width:100%;
-                margin-left:10px;
-               
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-left: 10px;
             }
             .item-cart .info-item-cart .head-title{
                 display:flex;
@@ -131,3 +137,258 @@
                     font-size: 14px;
                     color: #999;
                 }
+.block .discountship {
+    background: #fff7e2;
+    line-height: 1.3rem;
+    padding: 10px;
+    font-size: 14px;
+    clear: both;
+    display: block;
+}
+    .block .discountship .muathem {
+        font-weight: bold;
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+        display: inline;
+        line-height: 20px;
+        max-height: 40px;
+    }
+        .block .discountship .muathem:before {
+            content: '+';
+            font-size: 17px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #0081bd;
+        }
+        .block .discountship .muathem > a {
+            cursor: pointer;
+            margin-left: 13px;
+            line-height: 1;
+        }
+        .block .discountship .muathem .fulltext {
+            color: #333;
+            font-weight: normal;
+            display: inline;
+        }
+.content-cart .summary {
+    padding-top: 5px;
+    margin: 0 10px;
+}
+    .content-cart .summary .row1 {
+        width: 100%;
+        display: flex;
+        overflow: unset;
+        font-size: 14px;
+    }
+        .content-cart .summary .row1 .col55 {
+            width: calc(100%);
+            padding-bottom: 5px;
+        }
+            .row1 .col55 >div {
+                text-align: right;
+                position: relative;
+            }
+                .row1 .col55 .cost > span {
+                    display: inline-block;
+                    color: #999;
+                    width: auto;
+                    text-align: right;
+                    position: relative;
+                }
+                .row1 .col55 .cost #carttotal {
+                    display: inline-block;
+                    width: 120px;
+                    text-align: right;
+                    color: #333;
+                    font-size: 14px;
+                }
+.col55 .shipfee .inline-shipfree {
+    display: inline-block;
+    position: relative;
+  
+}
+ 
+
+    .shipfee .inline-shipfree .bhx-qstshipfree {
+        background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite@2x-checkout.v202101122327.png);
+        background-position: -452px -301px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        zoom: .7;
+        background-size: 500px auto;
+    }
+    .row1 .col55 .couponlink {
+    float: right;
+    position: relative;
+    color: #0081bd;
+    margin-top: 5px;
+    border: 1px solid #0081bd;
+    padding: 5px 9px;
+    border-radius: 5px;
+}
+.col55 .couponlink .icon-use-voucher {
+   
+    background-position: -229px -239px;
+    margin-right: 3px;
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite@2x-checkout.v202101122327.png);
+    background-size: 295px 300px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.content-cart .btn-order {
+    display: block;
+    padding: 0;
+    line-height: 18px;
+}
+    .content-cart .btn-order .btn-og {
+        margin: 5px 10px 10px;
+        display: block;
+        padding: 15px 20px;
+        font-size: 16px;
+        width: calc(100% - 20px);
+        font-weight: bold;
+        color: #fff !important;
+        border: 0;
+        text-align: center;
+        background: #ff9142;
+        border-radius: 4px;
+        background: #008848;
+        cursor: pointer;
+        outline: none;
+    }
+    .content-cart .btn-order .clearall {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        margin: 20px 0;
+    }
+        .btn-order .clearall button {
+            color: #0081bd;
+            background-color: transparent;
+            border: none;
+            padding: 0 5px;
+            cursor: pointer;
+            line-height: 20px;
+            position: relative;
+            outline:none;
+        }
+.order-cart .backstep {
+    float: left;
+    padding: 0 10px 10px;
+    color: #008848;
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+    background-color: #e9edf0;  
+}
+    .order-cart .backstep::after {
+        content: "";
+        font-size: 8px;
+        width: 1em;
+        height: 1em;
+        border-top: 1px solid #008848;
+        border-left: 1px solid #008848;
+        transform: rotate(-45deg) skew(0deg);
+        position: absolute;
+        left: 14px; 
+        top:6px;
+    }.order-cart .block{
+         padding:10px;
+     }
+
+       .order-cart .block .profile-block {
+           
+        }
+   
+             .block .profile-block .blockGetAddress{
+                padding-top: 5px;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+            }
+                .profile-block .blockGetAddress .line {
+                    margin-top: 12px;
+                    border: 3px solid #e9edf0;
+                    margin: 10px -10px;
+                }
+               .profile-block .blockGetAddress .btnGetAddress {
+                    font-weight: bold;
+                    cursor: pointer;
+                    display: block;
+                    font-size: 15px;
+                }
+            .block .profile-block .box-curaddress{
+                    position: relative;
+                    background: #fff;
+            }
+                .profile-block .box-curaddress .hpro {
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 10px 0;
+                    font-weight: bold;
+                    
+                }
+        .block .profile-block .wrapcheckbox {
+            width: 100%;
+            padding:10px;
+            margin: 0 0 16px;
+            display: block;
+            line-height: 30px;
+            box-sizing: border-box;
+            min-height: 30px;
+        }
+.block .profile-block .txtname {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #bebcbc;
+    border-radius: 4px;
+    padding: 4px;
+}
+            .profile-block .txtname .name-order{
+                display:flex;
+                justify-content:flex-start;      
+                align-items:center;
+                height:40px;
+                font-size:1.2em;
+            }
+                .profile-block .txtname .name-order::after{
+                    content:"*";
+                    color:red;
+                }
+           .ip{
+                display:none;
+                outline:none;
+                border:hidden;
+                height:20px;
+            }
+.name-order-after{
+    height:20px !important;
+}
+.block .profile-block .txtphone-order {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #bebcbc;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top:10px;
+}
+        .profile-block .txtphone-order .phone-order {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 40px;
+            font-size: 1.2em;
+        }
+          .profile-block .txtphone-order .phone-order::after{
+                    content:"*";
+                    color:red;
+                }
+.chosse-gender {
+    background-color: #dee7ee;
+}

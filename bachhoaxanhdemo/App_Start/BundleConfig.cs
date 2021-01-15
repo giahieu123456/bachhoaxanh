@@ -16,8 +16,8 @@ namespace bachhoaxanhdemo
                         "~/Scripts/Home/voucher.js",
                         "~/Scripts/Home/upanddownproduct.js", 
                         "~/Scripts/Home/ctsp.js",
-                        "~/Scripts/Home/carouselctsp.js",
-                        "~/Scripts/Home/Cart.js"
+                        "~/Scripts/Home/carouselctsp.js"
+                       
 
                         ));
 

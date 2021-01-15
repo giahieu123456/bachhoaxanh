@@ -2,6 +2,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font: 14px/18px 'Poppins', Helvetica, sans-serif;
     min-width: 1200px;
@@ -12,6 +13,14 @@ body {
 a {
     color: #288ad6;
     text-decoration: none;
+}
+
+input[type='checkbox'] {
+    background: #008848 !important;
+}
+
+input[type='radio'] {
+    background: #008848 !important;
 }
 
 /*Ultility Class BHX Icon*/
@@ -43,7 +52,7 @@ a {
 /*Style Header*/
 header {
     position: fixed;
-    z-index:2;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -341,7 +350,7 @@ input[type=text], input[type=tel], textarea {
     top: 40px;
     height: calc(100vh - 10px);
     z-index: 11;
-    max-height: 100% !important;
+    max-height: 100%;
 }
 
 .colmenu {
@@ -395,6 +404,7 @@ input[type=text], input[type=tel], textarea {
 
 /*Style Aside Content*/
 .sb-content {
+    max-height: 952px;
     height: 100%;
     width: 120%;
     padding-right: 14%;
@@ -417,7 +427,7 @@ nav {
     overflow: visible;
 }
 
-.new2020 nav > span {
+.new2020 .span-header {
     display: block;
     padding: 10px 10px 10px 35px;
     border-bottom: 1px solid #e5e5e5;
@@ -479,6 +489,7 @@ nav li {
         color: #1d1d1d;
         cursor: pointer;
     }
+
         nav li .nav-parent:before, nav li .nav-parent:after {
             content: '';
             border-top: 4px solid #979797;
@@ -488,6 +499,7 @@ nav li {
             right: 5px;
             top: 5px;
         }
+
     nav li .nav-parent-open:before, nav li .nav-parent-open:after {
         content: '';
         border-top: 4px solid #979797;
@@ -499,9 +511,9 @@ nav li {
         transform: rotate(180deg);
     }
 
-            .new2020 nav li .nav-parent:after {
-                border-top-color: #fff;
-            }
+.new2020 nav li .nav-parent:after {
+    border-top-color: #fff;
+}
 
 nav li .nav-parent:after {
     border-top-width: 4px;

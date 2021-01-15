@@ -1,0 +1,45 @@
+﻿@model bachhoaxanhdemo.Models.Product
+
+<div class="product-ctsp">
+    <div class="boxcarousel">
+       
+        <div class="list-carousel owl-carousel">
+
+            @foreach (var item in Model.image.Split(' '))
+            {
+                <div class="thumbpro">
+                    <img width="100%" height="100%" src="@item">
+                </div>
+            }          
+        </div>
+        <div class="chosse-crs">
+            @foreach (var item in Model.image.Split(' '))
+            {
+                <div class="img-crs">
+                    <img width="100%" height="100%" src="@item">
+                </div>
+            }
+           
+        </div>
+     
+
+
+
+    </div>
+
+    <div class="select-ctsp">
+        <h1 class="nameproduct">@Model.productName</h1>
+        <div class="boxprice">
+            <strong>@Model.productPrice</strong>
+        </div>
+        <a href="#" class="clickbuy">Chọn mua</a>
+        <div class="if-tc">
+            <p>✓ Táo đỏ&nbsp;nhập khẩu 100% từ Mỹ&nbsp;(<a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/chung-nhan-nhap-khau-cua-tao-do-1175243" target="_blank">Giấy chứng nhận nhập khẩu</a>)</p>
+            <p>✓ Đạt tiêu chuẩn xuất&nbsp;khẩu toàn cầu</p>
+            <p>✓ Bảo quản tươi ngon đến tận tay khách hàng</p>
+            <p>✓ Quả có hình lục lăng, vỏ màu đỏ đậm đẹp mắt</p>
+            <p>✓ Thịt táo trắng, thơm, thịt táo chín ít bột, giòn nhẹ, ngọt thanh,&nbsp;nhiều nước</p>
+        </div>
+    </div>
+
+</div>

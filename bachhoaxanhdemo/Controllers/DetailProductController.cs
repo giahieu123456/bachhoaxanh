@@ -39,5 +39,15 @@ namespace bachhoaxanhdemo.Controllers
             return View(productDetails);
         }
 
+        public ActionResult ProductDetail(int? id, int? idProd)
+        {
+            if (id == null && idProd == null)
+            {
+                return HttpNotFound();
+            }
+            var productDetails = _dbBhx2.Products.Where(p => p.idProductTitle == id).FirstOrDefault(x => x.idProduct == idProd);
+            return View(productDetails);
+        }
+
     }
 }

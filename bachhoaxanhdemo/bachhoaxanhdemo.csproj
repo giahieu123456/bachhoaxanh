@@ -290,6 +290,7 @@
     <Content Include="Views\Shared\product-ctsp.cshtml" />
     <Content Include="Views\DetailProduct\infodetails.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\DetailProduct\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

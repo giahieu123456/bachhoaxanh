@@ -1,4 +1,15 @@
-﻿$(document).ready(function () {
+﻿
+
+$(document).ready(function () {
+	$(".sb-container").addClass("header-cart")
+	$(".sb-container").mouseenter(function () {
+		$(".sb-container").removeClass("header-cart")
+		$("")
+	})
+	$(".sb-container").mouseleave(function () {
+		$(".sb-container").addClass("header-cart")
+	})
+	
 	$(".noselect-minus").click(function (e) {
 		var x = $(e.target).parent().find("input");
 		var total = Number(x.val());
@@ -9,5 +20,25 @@
 			x.val(total - 1);
 		}
 	});
-	$(".delete")   
+	$(".txtorder").click(function (e) {
+		$(e.target).next().show().focus()
+		$(e.target).addClass("name-order-after")	
+	})
+	$(window).on('click', function (e) {
+		if ($(e.target).is('.main-cart')) {			
+			$(".ip").each(function () {
+				if (this.value.length == 0) {
+					$(this).hide();	
+					$(this).prev().removeClass("name-order-after");
+				}
+            })
+			
+		}
+		
+		
+	})
+	
+	
+
+	
 })
