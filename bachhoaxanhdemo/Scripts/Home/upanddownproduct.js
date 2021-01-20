@@ -1,10 +1,9 @@
 ﻿$(document).ready(function () {
 	$(".buy").click(function (e) {
 		$(e.target).next().show();
-
 	})
 
-	$(".minus").click(function (e) {
+	$(".down-ctsp").click(function (e) {
 		var x = $(e.target).parent().find("input");
 		var total = Number(x.val());
 		if (total < 2) {
@@ -13,12 +12,10 @@
 
 		} else {
 			x.val(total - 1);
-
 		}
 	});
-	$(".plus").click(function (e) {
+	$(".up-ctsp").click(function (e) {
 		var x = $(e.target).parent().find("input");
-
 		var total = Number(x.val());
 		if (total >= 1) {
 		}

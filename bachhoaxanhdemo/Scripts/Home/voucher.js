@@ -9,6 +9,14 @@ $(window).on('click', function (e) {
 
 		$(".popup-voucher").hide()
 	}
+	if ($(e.target).is('.popup-clear-cart')) {
+
+		$('.popup-clear-cart').hide()
+	}
+	if ($(e.target).is('.popup-soldout')) {
+
+		$('.popup-soldout').hide()
+	}
 })
 
 

@@ -23,9 +23,9 @@
         </a>
         <a class="buy">Chọn mua</a>
         <div class="updown">
-            <div class="down-ctsp minus"><span></span></div>
+            <div class="down-ctsp "><span></span></div>
             <input class="number-ctsp" value="1" maxlength="50" pattern="[0-9]*" type="number">
-            <div class="up-ctsp plus"><span></span> <span></span></div>
+            <div class="up-ctsp "><span></span> <span></span></div>
         </div>
         <div class="popup-soldout" style="display:none;">
             <div class="ajs-dialog" tabindex="0">
@@ -40,6 +40,8 @@
     </li>
 
 }
-<script src="~/Scripts/Home/upanddownproduct.js"></script>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/loadmore")
+
 
 

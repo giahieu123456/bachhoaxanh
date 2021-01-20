@@ -13,12 +13,9 @@ namespace bachhoaxanhdemo
                         , "~/Scripts/Home/dropdownHeader.js",
                         "~/Scripts/Home/popupfeedback.js",
                         "~/Scripts/Home/scrollbacktop.js",
-                        "~/Scripts/Home/voucher.js",
-                        "~/Scripts/Home/upanddownproduct.js", 
+                        "~/Scripts/Home/voucher.js",                      
                         "~/Scripts/Home/ctsp.js",
-                        "~/Scripts/Home/carouselctsp.js"
-                       
-
+                        "~/Scripts/Home/carouselctsp.js"                    
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -27,10 +24,14 @@ namespace bachhoaxanhdemo
             //Bundles Owl Carousel
             bundles.Add(new ScriptBundle("~/bundles/owl.carousel").Include(
                         "~/Scripts/Home/owl.carousel.min.js",
-                        "~/Scripts/Home/owlcarousel.js"
-                        
+                        "~/Scripts/Home/owlcarousel.js"                        
                         ));
-
+            bundles.Add(new ScriptBundle("~/bundles/cart").Include(                       
+                           "~/Scripts/Home/cart.js"
+                       ));
+            bundles.Add(new ScriptBundle("~/bundles/loadmore").Include(                    
+                          "~/Scripts/Home/upanddownproduct.js"
+                      ));
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

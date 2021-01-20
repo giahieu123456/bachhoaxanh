@@ -26,9 +26,9 @@
                     </div>
                     <div class="quantity">
                         <div class="quantitynum">
-                            <i class="noselect-minus">-</i>
+                            <i class="noselect-minus ">-</i>
                             <input value="1" type="number" min="0" max="50" class="qty">
-                            <i class="noselect-plus plus">+</i>
+                            <i class="up-ctsp noselect-plus">+</i>
                         </div>
                         <a class="delete">Xóa</a>
                     </div>
@@ -71,16 +71,16 @@
         </div>
         <div class="btn-order">
             <button class="btn-og btn-step">ĐẶT HÀNG</button>
-            <div class="clearall">
+            <div class="clearall clear-all">
                 <button>XÓA GIỎ HÀNG</button>
             </div>
         </div>
     </div>
-    <div class="order-cart cart">
+    <div class="order-cart cart" style="display:none;">
         <a class="backstep">Xem lại giỏ hàng</a>
         <div class="block">
             <form class="form-order">
-                <divc class="profile-block">
+                <div class="profile-block">
                     <div class="blockGetAddress">
                         <a class="btnGetAddress">» LẤY ĐỊA CHỈ MUA HÀNG TRƯỚC</a>
                         <div class="line"></div>
@@ -98,31 +98,230 @@
                             <label for="ProfileItems_0_Gender0"> Chị</label>
                         </span>
                     </div>
-                    <div class="txtname">
-                        <label class="name-order txtorder" >Họ và tên</label>
-                        <input class="ip-name ip" type="text" maxlength="100" />
+                    <div class="txtname txt">
+                        <label class="name-order txtorder ">Họ và tên</label>
+                        <input class="ip-name ip check-null-order" type="text" maxlength="100" />
                     </div>
-                    <div class="txtphone-order">
-                        <label class="phone-order txtorder" >Số điện thoại</label>
-                        <input class="ip-phone ip" type="number" maxlength="100"  />
+                    <div class="txtphone-order txt">
+                        <label class="phone-order txtorder">Số điện thoại</label>
+                        <input class="ip-phone ip check-null-order" type="number" maxlength="100" />
                     </div>
-                    <div class="wrapcheckbox">               
-                            <div class="check-call-order">
-                                <input class="IsCallOthers" type="checkbox" />
-                                <label for="IsCallOthers" >Gọi người khác nhận hàng (nếu có)</label>                
-                            </div>
+                    <div class="wrapcheckbox">
+                        <div class="check-call-order">
+                            <input class="IsCallOthers" type="checkbox" />
+                            <label for="IsCallOthers">Gọi người khác nhận hàng (nếu có)</label>
+                        </div>
+                        <div class="receiver">
+
                             <div class="wrapcheckbox chosse-gender">
                                 <span class="gender">
-                                    <input type="radio" name="ProfileItems"  value="1">
+                                    <input type="radio" name="ProfileItems" value="1">
                                     <label for="ProfileItems"> Anh &nbsp; </label>
                                 </span>
                                 <span class="gender">
-                                    <input type="radio" name="ProfileItems"  value="0">
+                                    <input type="radio" name="ProfileItems" value="0">
                                     <label for="ProfileItems"> Chị</label>
                                 </span>
                             </div>
+                            <div class="txtname txt">
+                                <label class="name-order-receiver txtorder">Họ và tên</label>
+                                <input class="ip-name-receiver ip" type="text" maxlength="100" />
+                            </div>
+                            <div class="txtphone-order txt">
+                                <label class="phone-order-receiver txtorder">Số điện thoại</label>
+                                <input class="ip-phone-receiver ip" type="number" maxlength="100" />
+                            </div>
+
+                        </div>
                     </div>
-                </divc>
+                    <div class="line"></div>
+                    <div class="delivery-address">
+                        <h3 class="rtv"><b><span>2. </span>Địa chỉ nhận hàng:</b> </h3>
+                        <div class="row row-location">
+                            <div class="adressrow">
+                                <div class="adressrow-left adressrow-general">
+                                    <span class="city check-null-order">TP. Hồ Chí Minh</span>
+                                </div>
+                                <div class="adressrow-right adressrow-general txtdistrict-order txt">
+                                    <label class="district-order txtorder color-location">Nhập quận, huyện</label>
+                                    <input class="ip-district ip check-null-order" type="text" maxlength="100" />
+
+                                </div>
+                            </div>
+                            <div class="group-city">
+                                <div class="chosse-city">
+                                    <input class="seargh-city" type="search" placeholder="Nhập tên Tỉnh thành để tìm nhanh hơn" />
+                                    <div>
+                                        <span class="chosse-a-city">TP. Hồ Chí Minh </span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city">TP. Biên Hòa</span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city">Bình Dương </span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city">TP. Tân An, Long An</span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city"> TP. Mỹ Tho</span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city">TP. Tây Ninh</span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city">TP. Cần Thơ </span>
+                                    </div>
+                                    <div>
+                                        <span class="chosse-a-city">TP. Phan Thiết </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="wards">
+                                <div class="txtwards-order txt">
+                                    <label class="wards-order txtorder color-location">Nhập Phường Xã</label>
+                                    <input class="ip-wards ip check-null-order" type="text" maxlength="100" />
+                                </div>
+                            </div>
+                            <div class="street">
+                                <div class="txtstreet-order txt">
+                                    <label class="street-order txtorder color-location ">Nhập số nhà, tên đường</label>
+                                    <input class="ip-street ip check-null-order" type="text" maxlength="100" />
+                                </div>
+                            </div>
+                            <div class="check-call-order">
+                                <input class="IsCalldelivery" type="checkbox" />
+                                <label for="IsCalldelivery">
+                                    Yêu cầu giao tận cửa chung cư, văn phòng
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="line"></div>
+                    <div class="box-data">
+                        <h3 class="rtv">
+                            3. Thời gian nhận hàng:
+                        </h3>
+                    </div>
+                    <div class="adressrow">
+                        <div class="group-time-receive">
+                            <span class="span-delivery-time check-null-order check-day"> Hôm Nay (@DateTime.Now.ToString("dd/MM"))</span>
+                            <ul class="ul-receive">
+                                <li class="datetime-receive">
+                                    Hôm Nay (@DateTime.Now.ToString("dd/MM"))
+                                </li>
+                                <li class="datetime-receive">
+                                    Ngày Mai (@DateTime.Now.AddDays(1).ToString("dd/MM"))
+                                </li>
+                                <li class="datetime-receive">
+                                    @DateTime.Now.AddDays(2).DayOfWeek (@DateTime.Now.AddDays(2).ToString("dd/MM"))
+                                </li>
+                                <li class="datetime-receive">
+                                    @DateTime.Now.AddDays(3).DayOfWeek (@DateTime.Now.AddDays(3).ToString("dd/MM"))
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="time-receive">
+                            <span class="span-delivery-time check-null-order check-hour">
+                                @{
+
+                                    var x = DateTime.Now.Hour;
+                                    if (x  <= 12 && x > 0)
+                                    {
+                                      <p>12h - 15h-Phí: 15.000</p>
+                                    }
+                                    if (x <= 17 && x >= 13)
+                                    {
+                                        <p>17h - 21h-Phí: 20.000</p>
+                                    }
+                                    if(x >= 18)
+                                    {
+                                    <p>08h - 12h-Phí: 15.000</p>
+                                    }
+
+                                }
+
+                            </span>
+                    
+
+                                                <ul class="ul-receive">
+                                <li class="datetime-receive"> 08h - 12h-Phí: 15.000 </li>
+                                <li class="datetime-receive"> 12h - 17h-Phí: 15.000 </li>
+                                <li class="datetime-receive"> 17h - 21h-Phí: 20.000 </li>
+                            </ul>
+                               
+                            
+
+                        </div>
+                    </div>
+                    <div class="discountship">
+                        <div class="muathem">
+                            <a href="/"> Mua thêm</a> <span class="fulltext">
+                                <b>72.000₫</b> để được
+                                <b> miễn phí giao 5 đơn hàng đầu tiên </b>
+                                (Không áp dụng khi mua  hàng nặng, to:<b>Nước giải khát, Nước suối, Bia, Nước uống có cồn</b>)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="check-call-order">
+                        <input class="IsCalldelivery" type="checkbox">
+                        <label for="IsCalldelivery">
+                            Gọi trước khi giao
+                        </label>
+                    </div>
+                    <div class="check-call-order">
+                        <input class="IsCalldelivery" type="checkbox">
+                        <label for="IsCalldelivery">
+                            Xuất hóa đơn công ty
+                        </label>
+                    </div>
+                    <div class="note">
+                        <div class="txtstreet-order txt">
+                            <label class="street-order txtorder color-location ">Ghi chú thêm(nếu có)</label>
+                            <input class="ip-street ip" type="text" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="row1">
+                        <div class="col55">
+                            <div class="cost"><span>Tiền hàng: </span> <label id="carttotal"><b>15.000₫</b></label></div>
+                            <div class="shipfee">
+                                <span>
+                                    <a class="inline-shipfree"><i class="bhx-qstshipfree"></i></a> Phí giao dự kiến
+                                    : 15.0000
+                                </span>
+
+                            </div>
+                            <div class="text-shipfree">
+                                <span class="text-green">
+                                    <a style="color:forestgreen;" target="_blank" href="/chinh-sach-giao-hang" title="Chính sách giao hàng">
+                                        (Phí sẽ được cập nhật sau khi nhập số điện thoại)
+                                    </a>
+                                </span>
+                            </div>
+                            <a href="javascript:;" class="couponlink">
+                                <i class="icon-use-voucher"></i> Dùng phiếu mua hàng
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btn-finnish">
+                        <a class="confirm-order">
+                            XÁC NHẬN ĐƠN HÀNG
+
+                           <br /> <span class="box-warning-payment">(Lựa chọn các hình thức thanh toán ở bước sau)</span>
+                        </a>
+                        <div class="clear-all"> <a>XÓA GIỎ HÀNG</a></div>
+                        <div class="box-dieukhoan">
+                            <a href="/quy-che-hoat-dong" target="_blank" class="dieukhoan">
+                                Bằng cách đặt hàng, bạn đồng ý với điều khoản sử dụng của BachhoaXANH
+                            </a>
+                        </div>
+                    </div>
+                  
+                </div> 
+
             </form>
           
         </div>
@@ -139,8 +338,25 @@
         </div>
     </div>
 </div>
+<div class="popup-clear-cart" style="display:none;">
+    <div class="ajs-dialog" tabindex="0">
+        <div class="ajs-body">
+            <div class="ajs-content">bạn có đồng ý xóa giỏ hàng</div>
+        </div>
+        <div class="ajs-footer">
+         
+            <a href="@Url.Action("index","Home")" class="ajs-ok">
+                     ĐỒNG Ý
+                </a> 
+                
+                <button class="ajs-no">Không</button>
+        </div>
+       
+           
+        
+    </div>
+</div>
 
 
 @Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/owl.carousel")
-<script src="~/Scripts/Home/Cart.js"></script>
+@Scripts.Render("~/bundles/cart")
