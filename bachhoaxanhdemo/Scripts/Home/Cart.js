@@ -76,6 +76,7 @@ $(document).ready(function () {
 					$(item).parent().show();
 				} else {
 					$(item).parent().hide();
+					
                 }
             })   
         }
@@ -116,13 +117,27 @@ $(document).ready(function () {
 	})
 	$
 	$(".confirm-order").click(function () {
+		var check = 0;
 		$(".check-null-order").map(function (i, item) {
-			if ($(item).text =="" || $(item).val() == "") {
-				alert("rtr")
+			if ($(item).val() == "") {
+				$(item).parent().next().show()
+				$(".popup-check-null").show();
 			} else {
-				alert("sadsakhdkjsa")
+				$(item).parent().next().hide();
+				check += 1;		
+				if (check == 5) {
+					$(item).parent().next().hide();
+					$(".order-cart").hide();
+					$(".confirm-pay").show();
+					$(".btn-home").show();
+
+				}
 			}
+			
 		})	
+	})
+	$(".ajs-ok").click(function () {
+		$(".popup-check-null").hide();
 	})
 	var dt = new Date();
 	var time = dt.getHours()
@@ -131,4 +146,10 @@ $(document).ready(function () {
 		$(".check-day").text("Ngày mai")
 		$(".check-hour").text("08h - 12h-Phí: 15.000 ")
 	}
+	$(".viewListCartItem").click(function () {
+		$(".viewListCartItem").toggleClass("expend")
+		$(".viewListCartItem").next().slideToggle()
+		$(".summary").slideToggle()
+    }
+	)
 })

@@ -173,32 +173,32 @@
             font-weight: normal;
             display: inline;
         }
-.content-cart .summary {
+ .summary {
     padding-top: 5px;
     margin: 0 10px;
 }
-    .content-cart .summary .row1 {
+    .summary .row1 {
         width: 100%;
         display: flex;
         overflow: unset;
         font-size: 14px;
     }
-        .content-cart .summary .row1 .col55 {
+        .summary .row1 .col55 {
             width: calc(100%);
             padding-bottom: 5px;
         }
-            .row1 .col55 >div {
+             .col55 >div {
                 text-align: right;
                 margin-top:5px;
             }
-                .row1 .col55 .cost > span {
+                  .cost > span {
                     display: inline-block;
                     color: #999;
                     width: auto;
                     text-align: right;
                     position: relative;
                 }
-                .row1 .col55 .cost #carttotal {
+                 .cost >label {
                     display: inline-block;
                     width: 120px;
                     text-align: right;
@@ -220,16 +220,20 @@
         zoom: .7;
         background-size: 500px auto;
     }
-    .row1 .col55 .couponlink {
-    float: right;
-   
+.row1 .col55 {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-end;
+}
+    .couponlink {
+    width:204px;
     color: #0081bd;
     margin-top: 5px;
     border: 1px solid #0081bd;
     padding: 5px 9px;
     border-radius: 5px;
 }
-.col55 .couponlink .icon-use-voucher {
+ .couponlink .icon-use-voucher {
    
     background-position: -229px -239px;
     margin-right: 3px;
@@ -378,6 +382,7 @@
     padding: 4px;
     margin-top:10px;
 }
+
 .receiver {
     display:none;
     padding: 10px 6px;
@@ -451,7 +456,7 @@
                    
                 }
 .row .adressrow .adressrow-right {
-    flex-basis: 50%;
+    width:288px;
 }
 .row .group-city {
     display:none;
@@ -630,3 +635,181 @@
             margin: 10px;
             outline: none;
         }
+.note-info{
+    color:red;
+    margin-top:5px;
+    font-size:1em;
+}
+.district-note{
+ color:red !important;
+}
+.popup-check-null {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 100;
+    background-color: #1d1d1d9c;
+    padding: 200px 0px 0px 700px;
+}
+
+    .popup-check-null .ajs-dialog {
+        height: 108px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        max-width: 640px;
+        padding: 10px 6px 0 6px;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 35%;
+        box-sizing: border-box;
+        top: 15vh;
+        outline: none;
+    }
+
+        .popup-check-null .ajs-dialog .ajs-no {
+            width: 65px;
+            height: 25px;
+            color: #fff;
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            outline: none;
+        }
+.confirm-pay {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 473px 0px;
+    background-color: white;
+}
+
+.confirm-pay .group-pay {
+    padding-top: 20px;
+    display:flex;
+    justify-content:center;
+}
+    .confirm-pay .group-pay .message-thanks {
+        padding: 10px;
+        border-bottom: 1px solid #f0f3f5;
+        color: #008848;
+        font-size: 14px;
+        font-weight: bold;
+    }
+.group-pay .message-thanks .icon-ordersuccess {
+    background-position: -63px -211px;
+    width: 26px;
+    height: 28px;
+    margin-right: 4px;
+    display: inline-block;
+    zoom: .85;
+    background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite@2x-checkout.v202101211250.png);
+    background-size: 295px auto !important;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.confirm-pay .list-info {
+    padding-top: 20px;
+    display: flex;
+    flex-direction:column;
+    
+}
+    .confirm-pay .list-info .shipping {
+       list-style-type: none;
+       margin:10px;
+    }
+    .confirm-pay .list-info .shipping >li{
+        padding:5px 15px;
+        position:relative;
+    }
+        .confirm-pay .list-info .shipping > li:before {
+            color: #ccc;
+            content: "•";
+            display: inline;
+            font-size: 16px;
+            margin-right: 5px;
+            position: absolute;
+            top: 3px;
+            left: 2px;
+        }
+    .confirm-pay .list-info .cart-info {
+        padding: 10px;
+    }
+.list-info .cart-info .viewListCartItem {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+    .list-info .cart-info .viewListCartItem:before {
+        color: #ccc;
+        content: "•";
+        display: inline;
+        font-size: 16px;
+        margin-right: 5px;
+        position: absolute;
+        top: -2px;
+        left: 5px;
+    }
+    .list-info .cart-info .viewListCartItem::after {
+        content: '';
+        width: 0;
+        right: 0;
+        border-top: 6px solid #288ad6;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        display: inline-block;
+        vertical-align: middle;
+        margin: -2px 0 0 5px;
+    }
+    .list-info .cart-info .viewListCartItem.expend::after {
+        content: '';
+        width: 0;
+        right: 0;
+        display: inline-block;
+        vertical-align: middle;
+        margin: -2px 0 0 5px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #0081bd;
+        border-top: 0;
+    }
+.total-cart{
+    margin:10px 0px;
+}
+.message-info-payment {
+    padding: 10px;
+    background: #fff7e2;
+    width: 98%;
+    margin: 10px auto;
+}
+.pay-cash {
+    display: flex;
+    color: #008848;
+}
+    .pay-cash .icon-cash {
+        background-position: -7px -239px;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+        background-image: url(//cdn.tgdd.vn/bachhoaxanh/www/Content/images/sprite@2x-checkout.v202101211609.png);
+        background-size: 295px auto !important
+    }
+.btn-home {
+    text-align: center;
+    background: #e9edf0;
+    padding: 15px;
+    margin-bottom: 0 !important;
+}
+
+    

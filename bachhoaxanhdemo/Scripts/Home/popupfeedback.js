@@ -19,5 +19,9 @@
 
 			$(".popup-delete").hide()
 		}
+		if ($(e.target).is('.popup-check-null')) {
+
+			$(".popup-check-null").hide()
+		}
 	})
 })
