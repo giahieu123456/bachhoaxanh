@@ -361,20 +361,22 @@
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0, 0.4);
-    padding-top: 100px;
-    padding-left: 555px;
+  
 }
 
-.popup-cmt .confirm-cmt {
-    border: solid 1px white;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    max-width: 515px;
-    height: 480px;
-    overflow: hidden;
-}
+    .popup-cmt .confirm-cmt {
+        border: solid 1px white;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        max-width: 515px;
+        height: 480px;
+        overflow: hidden;
+        margin: :auto;
+        margin: auto;
+        margin-top: 200px;
+    }
 
 .popup-cmt .confirm-cmt .title-cmt {
     margin: 10px 10px 0px 10px;

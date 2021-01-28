@@ -1,0 +1,29 @@
+﻿@model List<bachhoaxanhdemo.Models.CardItem>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="item-cart">
+            <img alt=@item.Product.productName src=@item.Product.image ?? @item.Product.image.Split(' ')[0] width="60">
+            <div class="info-item-cart">
+                <div class="head-title">
+                    <a href="/title-@item.Product.idProductTitle/product-@item.Product.idProduct" class="name">@item.Product.productName</a>
+                    <div class="colmoney"><strong>@(item.Product.productPrice.GetValueOrDefault(0) * item.Quantity)₫</strong></div>
+                </div>
+                <div class="quantity">
+                    <div class="quantitynum">
+                        <i class="noselect-minus ">-</i>
+                        <input value="@item.Quantity" type="number" min="0" max="50" class="qty">
+                        <i class="up-ctsp noselect-plus">+</i>
+                    </div>
+                    <a class="delete">Xóa</a>
+                </div>
+                <span class="unit">@item.Product.productPrice.GetValueOrDefault(0)₫ / lon</span>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div>Giỏ hàng rỗng</div>
+}

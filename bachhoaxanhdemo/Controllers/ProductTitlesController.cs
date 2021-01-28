@@ -10,7 +10,7 @@ namespace bachhoaxanhdemo.Controllers
    
     public class ProductTitlesController : Controller
     {
-        public bhxEntities2 _dbBhx2 = new bhxEntities2();
+        public BhxDbContext _dbBhx2 = new BhxDbContext();
         // GET: ProductTitles
         public ActionResult Index(int? id)
         {

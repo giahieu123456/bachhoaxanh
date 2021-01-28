@@ -1,6 +1,15 @@
 ﻿$(document).ready(function () {
 	$(".buy").click(function (e) {
 		$(e.target).next().show();
+		productId = $(e.target).data("id")
+		var url = "/Cart/AddItem/";
+	
+		$.ajax({
+			url: url,
+			data: { productId: productId, quantity: 1 },
+			success: function () {
+				alert("qwew")
+            }
 	})
 
 	$(".down-ctsp").click(function (e) {

@@ -1,4 +1,4 @@
-﻿
+﻿@model List<bachhoaxanhdemo.Models.CardItem>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,24 +17,12 @@
             </div>
         </div>
         <div class="block">
-            <div class="item-cart">
-                <img alt="Kem đặc có đường DeliPure lon 380g" src="https://cdn.tgdd.vn/Products/Images/2526/86753/bhx/kem-dac-co-duong-delipure-lon-380g-202002141032533774_300x300.jpg" width="60">
-                <div class="info-item-cart">
-                    <div class="head-title">
-                        <a href="/sua-dac/sua-dac-co-duong-delipure-380g" class="name">Kem đặc có đường DeliPure lon 380g</a>
-                        <div class="colmoney"><strong>750.000₫</strong></div>
-                    </div>
-                    <div class="quantity">
-                        <div class="quantitynum">
-                            <i class="noselect-minus ">-</i>
-                            <input value="1" type="number" min="0" max="50" class="qty">
-                            <i class="up-ctsp noselect-plus">+</i>
-                        </div>
-                        <a class="delete">Xóa</a>
-                    </div>
-                    <span class="unit">15.000₫ / lon</span>
-                </div>
-            </div>
+
+             
+            @Html.Action("AddItem")
+
+
+
             <div class="discountship">
                 <div class="muathem">
                     <a href="/"> Mua thêm</a> <span class="fulltext">
@@ -92,7 +80,7 @@
                     </div>
                     <div class="wrapcheckbox">
                         <span class="gender">
-                            <input checked="checked"   type="radio" name="ProfileItems_0_Gender" id="ProfileItems_0_Gender1" value="1">
+                            <input checked="checked" type="radio" name="ProfileItems_0_Gender" id="ProfileItems_0_Gender1" value="1">
                             <label for="ProfileItems_0_Gender1"> Anh &nbsp; </label>
                         </span>
                         <span class="gender">
@@ -419,12 +407,12 @@
             <div class="ajs-content">bạn có đồng ý xóa giỏ hàng</div>
         </div>
         <div class="ajs-footer">
-         
+
             <a href="@Url.Action("index","Home")" class="ajs-ok">
-                     ĐỒNG Ý
-                </a>                
-                <button class="ajs-no">Không</button>
-        </div>                     
+                ĐỒNG Ý
+            </a>
+            <button class="ajs-no">Không</button>
+        </div>
     </div>
 </div>
 <div class="popup-check-null" style="display:none;">

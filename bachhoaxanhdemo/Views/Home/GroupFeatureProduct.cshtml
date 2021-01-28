@@ -21,7 +21,7 @@
                 <label>-24%</label>
             </div>
         </a>
-        <a class="buy">Chọn mua</a>
+        <a data-id="@item.idProduct" href="/add-to-cart?productId=@item.idProduct&quantity=1" class="buy">Chọn mua</a>
         <div class="updown">
             <div class="down-ctsp "><span></span></div>
             <input class="number-ctsp" value="1" maxlength="50" pattern="[0-9]*" type="number">
@@ -40,7 +40,7 @@
     </li>
 
 }
-@Scripts.Render("~/bundles/jquery")
+
 @Scripts.Render("~/bundles/loadmore")
 
 
